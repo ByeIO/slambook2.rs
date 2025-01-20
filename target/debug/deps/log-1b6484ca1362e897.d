@@ -1,0 +1,10 @@
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/liblog-1b6484ca1362e897.rmeta: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/macros.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/serde.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/__private_api.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/liblog-1b6484ca1362e897.rlib: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/macros.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/serde.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/__private_api.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/log-1b6484ca1362e897.d: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/macros.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/serde.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/__private_api.rs
+
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/lib.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/macros.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/serde.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/__private_api.rs:

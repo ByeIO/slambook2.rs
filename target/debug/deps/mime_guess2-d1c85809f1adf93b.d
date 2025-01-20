@@ -1,0 +1,12 @@
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/libmime_guess2-d1c85809f1adf93b.rmeta: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime_guess2-2.0.5/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime_guess2-2.0.5/src/impl_bin_search.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime_guess2-2.0.5/src/mime_types.rs /Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/build/mime_guess2-117324dfa7116231/out/mime_types_generated.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/libmime_guess2-d1c85809f1adf93b.rlib: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime_guess2-2.0.5/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime_guess2-2.0.5/src/impl_bin_search.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime_guess2-2.0.5/src/mime_types.rs /Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/build/mime_guess2-117324dfa7116231/out/mime_types_generated.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/mime_guess2-d1c85809f1adf93b.d: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime_guess2-2.0.5/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime_guess2-2.0.5/src/impl_bin_search.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime_guess2-2.0.5/src/mime_types.rs /Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/build/mime_guess2-117324dfa7116231/out/mime_types_generated.rs
+
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime_guess2-2.0.5/src/lib.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime_guess2-2.0.5/src/impl_bin_search.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime_guess2-2.0.5/src/mime_types.rs:
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/build/mime_guess2-117324dfa7116231/out/mime_types_generated.rs:
+
+# env-dep:MIME_TYPES_GENERATED_PATH=/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/build/mime_guess2-117324dfa7116231/out/mime_types_generated.rs

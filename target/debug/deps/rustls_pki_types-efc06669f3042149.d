@@ -1,0 +1,10 @@
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/librustls_pki_types-efc06669f3042149.rmeta: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.1/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.1/src/base64.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.1/src/server_name.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.1/src/pem.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/librustls_pki_types-efc06669f3042149.rlib: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.1/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.1/src/base64.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.1/src/server_name.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.1/src/pem.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/rustls_pki_types-efc06669f3042149.d: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.1/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.1/src/base64.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.1/src/server_name.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.1/src/pem.rs
+
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.1/src/lib.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.1/src/base64.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.1/src/server_name.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.1/src/pem.rs:

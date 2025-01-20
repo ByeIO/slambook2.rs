@@ -1,0 +1,1 @@
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/examples/ch3-useGeometry: /Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/examples/ch3-useGeometry.rs

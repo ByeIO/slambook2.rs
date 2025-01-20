@@ -1,0 +1,10 @@
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/libwgpu_types-5f36e97398dcce73.rmeta: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wgpu-types-23.0.0/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wgpu-types-23.0.0/src/assertions.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wgpu-types-23.0.0/src/counters.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wgpu-types-23.0.0/src/math.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/libwgpu_types-5f36e97398dcce73.rlib: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wgpu-types-23.0.0/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wgpu-types-23.0.0/src/assertions.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wgpu-types-23.0.0/src/counters.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wgpu-types-23.0.0/src/math.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/wgpu_types-5f36e97398dcce73.d: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wgpu-types-23.0.0/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wgpu-types-23.0.0/src/assertions.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wgpu-types-23.0.0/src/counters.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wgpu-types-23.0.0/src/math.rs
+
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wgpu-types-23.0.0/src/lib.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wgpu-types-23.0.0/src/assertions.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wgpu-types-23.0.0/src/counters.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wgpu-types-23.0.0/src/math.rs:

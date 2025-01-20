@@ -1,0 +1,69 @@
+[workspace]
+members = [
+  "crates/sophus",
+  "crates/sophus_autodiff",
+  "crates/sophus_tensor",
+  "crates/sophus_image",
+  "crates/sophus_lie",
+  "crates/sophus_geo",
+  "crates/sophus_spline",
+  "crates/sophus_sensor",
+  "crates/sophus_opt",
+  "crates/sophus_timeseries",
+  "crates/sophus_renderer",
+  "crates/sophus_viewer",
+  "crates/sophus_sim",
+]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+include = ["**/*.rs", "**/*.wgsl", "**/*.md", "**/Cargo.toml"]
+keywords = ["robotics", "optimization"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/sophus-vision/sophus-rs/"
+version = "0.12.0"
+
+[workspace.dependencies]
+sophus = { path = "crates/sophus", version = "0.12.0" }
+sophus_autodiff = { path = "crates/sophus_autodiff", version = "0.12.0" }
+sophus_tensor = { path = "crates/sophus_tensor", version = "0.12.0" }
+sophus_image = { path = "crates/sophus_image", version = "0.12.0" }
+sophus_lie = { path = "crates/sophus_lie", version = "0.12.0" }
+sophus_geo = { path = "crates/sophus_geo", version = "0.12.0" }
+sophus_spline = { path = "crates/sophus_spline", version = "0.12.0" }
+sophus_sensor = { path = "crates/sophus_sensor", version = "0.12.0" }
+sophus_opt = { path = "crates/sophus_opt", version = "0.12.0" }
+sophus_timeseries = { path = "crates/sophus_timeseries", version = "0.12.0" }
+sophus_renderer = { path = "crates/sophus_renderer", version = "0.12.0" }
+sophus_sim = { path = "crates/sophus_sim", version = "0.12.0" }
+sophus_viewer = { path = "crates/sophus_viewer", version = "0.12.0" }
+
+approx = "0.5"
+as-any = "0.3"
+async-trait = "0.1"
+bytemuck = { version = "1.21.0", features = ["derive"] }
+concat-arrays = "0.1"
+dyn-clone = "1.0"
+env_logger = "0.11"
+faer = "0.20.1"
+linked-hash-map = "0.5"
+log = "0.4"
+nalgebra = { version = "0.33.2", features = ["rand", "bytemuck"] }
+ndarray = { version = "0.15", features = ["approx-0_5"] }
+num-traits = "0.2"
+rand = "0.8"
+snafu = "0.8.5"
+typenum = { version = "1.17", features = ["const-generics"] }
+winit = { version = "0.30.5", features = ["android-native-activity"] }
+
+# viewer
+eframe = { version = "0.28.1", features = ["wgpu"] }
+egui-wgpu = "0.28.1"
+egui_plot = "0.28.1"
+egui_extras = "0.28.1"
+thingbuf = "0.1.6"
+wgpu = "0.20.1"
+
+[profile.release]
+debug = 1

@@ -1,0 +1,7 @@
+成功构造SO(3)的Rotation3: LieGroup { params: [[0.7071067811865476, 0.0, 0.0, 0.7071067811865475]], phantom: PhantomData<sophus_lie::groups::rotation3::Rotation3Impl<f64, 1, 0, 0>> }
+SO(3) from quaternion: 
+LieGroup { params: [[0.7071067811865476, 0.0, 0.0, 0.7071067811865475]], phantom: PhantomData<sophus_lie::groups::rotation3::Rotation3Impl<f64, 1, 0, 0>> }
+so3 = [[0.0, 0.0, 1.5707963267948963]]
+so3 hat=
+[[0.0, 1.5707963267948963, -0.0], [-1.5707963267948963, 0.0, 0.0], [0.0, -0.0, 0.0]]
+so3 hat vee= [[0.0, 0.0, 1.5707963267948963]]

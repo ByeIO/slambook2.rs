@@ -1,0 +1,46 @@
+[package]
+name = "exp65-rust-ziglang-slambook2"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+nalgebra = { version = "0.33.2",features = ["rand"]}
+rand = "0.8.5"
+wgpu = "23.0.1"
+winit = "0.30.8"
+
+eframe = "0.30.0"
+egui = { version = "0.30.0", features = [
+    "default"
+]}
+egui_extras = {version = "0.30.0",features = ["default", "image"]}
+
+three-d = {path = "./static/three-d" , features=["egui-gui"] }
+three-d-asset = {version = "0.9",features = ["hdr", "http"] }
+
+env_logger = { version = "0.11.6", default-features = false, features = [
+    "auto-color",
+    "humantime",
+] }
+
+sophus = { version = "0.11.0" }
+sophus_autodiff = { version = "0.11.0" }
+sophus_geo = "0.11.0"
+sophus_image = "0.11.0"
+sophus_lie = "0.11.0"
+sophus_opt = "0.11.0"
+sophus_renderer = "0.11.0"
+sophus_sensor = "0.11.0"
+sophus_sim = "0.11.0"
+sophus_spline = "0.11.0"
+sophus_tensor = "0.11.0"
+sophus_timeseries = "0.11.0"
+sophus_viewer = "0.11.0"
+tokio = "1.43.0"
+approx = "0.5.1"
+bytemuck = "1.21.0"
+thingbuf = "0.1.6"
+
+# 依赖覆盖
+[patch.crates-io]
+pulp = { path = "./static/pulp" }

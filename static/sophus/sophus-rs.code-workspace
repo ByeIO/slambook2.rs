@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"rust-analyzer.linkedProjects": [
+			"./Cargo.toml",
+		],
+		"rust-analyzer.cargo.target": null,
+		"rust-analyzer.diagnostics.styleLints.enable": true,
+		"rust-analyzer.imports.granularity.group": "item",
+		"rust-analyzer.imports.prefix": "crate",
+		"rust-analyzer.cargo.unsetTest": [],
+		"rust-analyzer.cargo.features": [
+		],
+	}
+}

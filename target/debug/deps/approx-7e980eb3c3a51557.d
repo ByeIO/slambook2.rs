@@ -1,0 +1,11 @@
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/libapprox-7e980eb3c3a51557.rmeta: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/abs_diff_eq.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/relative_eq.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/ulps_eq.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/macros.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/libapprox-7e980eb3c3a51557.rlib: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/abs_diff_eq.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/relative_eq.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/ulps_eq.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/macros.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/approx-7e980eb3c3a51557.d: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/abs_diff_eq.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/relative_eq.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/ulps_eq.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/macros.rs
+
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/lib.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/abs_diff_eq.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/relative_eq.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/ulps_eq.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/approx-0.4.0/src/macros.rs:

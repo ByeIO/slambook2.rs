@@ -1,0 +1,10 @@
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/libpulp-2becf49b8c9508d0.rmeta: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pulp-0.18.22/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pulp-0.18.22/src/core_arch/mod.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pulp-0.18.22/src/core_arch/aarch64/mod.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pulp-0.18.22/src/aarch64.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/libpulp-2becf49b8c9508d0.rlib: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pulp-0.18.22/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pulp-0.18.22/src/core_arch/mod.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pulp-0.18.22/src/core_arch/aarch64/mod.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pulp-0.18.22/src/aarch64.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/pulp-2becf49b8c9508d0.d: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pulp-0.18.22/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pulp-0.18.22/src/core_arch/mod.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pulp-0.18.22/src/core_arch/aarch64/mod.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pulp-0.18.22/src/aarch64.rs
+
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pulp-0.18.22/src/lib.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pulp-0.18.22/src/core_arch/mod.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pulp-0.18.22/src/core_arch/aarch64/mod.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pulp-0.18.22/src/aarch64.rs:

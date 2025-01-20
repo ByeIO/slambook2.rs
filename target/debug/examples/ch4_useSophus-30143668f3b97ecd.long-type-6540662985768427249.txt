@@ -1,0 +1,1 @@
+&&nalgebra::Matrix<f32, nalgebra::Const<3>, nalgebra::Const<3>, ArrayStorage<f32, 3, 3>>

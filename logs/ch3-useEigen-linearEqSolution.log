@@ -1,0 +1,18 @@
+a1_dmatrix:VecStorage { data: [0.18461385127424557, -0.13599891502284991, -0.11636134881110308, -0.13599891502284991, 1.0316937132197235, -0.6144621320452649, -0.11636134881110308, -0.6144621320452649, 1.3572091986573922], nrows: Dyn(3), ncols: Dyn(3) }
+eigenValue of A =
+[[0.11290981342904309, 0.6304502200460879, 1.830156729676231]]
+Solution of Gaussian Elimination: x =
+VecStorage { data: [-6.080681310046033, -0.368208894022218, -0.6789726867493889], nrows: Dyn(3), ncols: Const }
+Solution of nalgebra: x =
+VecStorage { data: [-6.080681310046033, -0.3682088940222181, -0.6789726867493888], nrows: Dyn(3), ncols: Const }
+Solution of LU decomposition: x =
+VecStorage { data: [-6.080681310046033, -0.368208894022218, -0.6789726867493889], nrows: Dyn(3), ncols: Const }
+Solution of LLT decomposition: x =
+VecStorage { data: [-6.080681310046032, -0.3682088940222176, -0.6789726867493887], nrows: Dyn(3), ncols: Const }
+Solution of QR decomposition: x =
+VecStorage { data: [-6.080681310046039, -0.36820889402221935, -0.67897268674939], nrows: Dyn(3), ncols: Const }
+Solution of SVD: x =[[-6.080681310046036, -0.36820889402221635, -0.6789726867493877]]
+Singular values of A:
+[[1.8301567296762318, 0.6304502200460869, 0.11290981342904292]]
+Solution of Eigen Value Decomposition: x =
+[[-6.080681310046041, -0.3682088940222189, -0.67897268674939]]

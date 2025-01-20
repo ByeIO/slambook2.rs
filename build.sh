@@ -1,0 +1,1 @@
+RUST_BACKTRACE=1 cargo run --example ch3-useEigen-linearEqSolution
