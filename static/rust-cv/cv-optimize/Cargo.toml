@@ -1,0 +1,12 @@
+[package]
+name = "cv-optimize"
+version = "0.1.0"
+authors = ["Geordon Worley <vadixidav@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+cv-core = { version = "0.15.0", path = "../cv-core" }
+cv-geom = { version = "0.7.0", path = "../cv-geom" }
+itertools = "0.10.3"
+log = { version = "0.4.14", default-features = false }
+float-ord = { version = "0.3.2", default-features = false }

@@ -1,0 +1,10 @@
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/libbitstream_io-18a59c4b9cbc2b4f.rmeta: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitstream-io-2.6.0/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitstream-io-2.6.0/src/huffman.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitstream-io-2.6.0/src/read.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitstream-io-2.6.0/src/write.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/libbitstream_io-18a59c4b9cbc2b4f.rlib: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitstream-io-2.6.0/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitstream-io-2.6.0/src/huffman.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitstream-io-2.6.0/src/read.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitstream-io-2.6.0/src/write.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/bitstream_io-18a59c4b9cbc2b4f.d: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitstream-io-2.6.0/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitstream-io-2.6.0/src/huffman.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitstream-io-2.6.0/src/read.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitstream-io-2.6.0/src/write.rs
+
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitstream-io-2.6.0/src/lib.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitstream-io-2.6.0/src/huffman.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitstream-io-2.6.0/src/read.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitstream-io-2.6.0/src/write.rs:
