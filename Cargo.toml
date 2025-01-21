@@ -8,10 +8,15 @@ env_logger = { version = "0.11.6", default-features = false, features = [
     "auto-color",
     "humantime",
 ] }
+
+# 随机数
 rand = "0.8.5"
+rand_distr = "0.4.3"
+fastrand = "2.3.0"
 
 # 线性代数
 nalgebra = { version = "0.33.2",features = ["rand"]}
+ndarray = "0.16.1"
 
 # winit
 wgpu = "23.0.1"
@@ -56,6 +61,12 @@ akaze = "0.7.0"
 eight-point = "0.8.0"
 lambda-twist = "0.7.0"
 image = "0.25.5"
+
+# 最小二乘优化
+gomez = "0.5.0"
+
+# 图优化
+factrs = "0.2.0"
 
 # 依赖覆盖
 [patch.crates-io]

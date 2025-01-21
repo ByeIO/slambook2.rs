@@ -1,0 +1,10 @@
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/libfactrs_proc-ed44da4a64b99e15.dylib: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/fac.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/noise.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/residual.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/robust.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/variable.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/factrs_proc-ed44da4a64b99e15.d: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/fac.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/noise.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/residual.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/robust.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/variable.rs
+
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/lib.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/fac.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/noise.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/residual.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/robust.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/factrs-proc-0.2.0/src/variable.rs:

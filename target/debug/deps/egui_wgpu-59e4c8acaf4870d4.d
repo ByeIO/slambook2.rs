@@ -1,0 +1,10 @@
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/libegui_wgpu-59e4c8acaf4870d4.rmeta: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/egui-wgpu-0.28.1/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/egui-wgpu-0.28.1/src/renderer.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/egui-wgpu-0.28.1/src/winit.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/egui-wgpu-0.28.1/src/egui.wgsl
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/libegui_wgpu-59e4c8acaf4870d4.rlib: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/egui-wgpu-0.28.1/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/egui-wgpu-0.28.1/src/renderer.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/egui-wgpu-0.28.1/src/winit.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/egui-wgpu-0.28.1/src/egui.wgsl
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/target/debug/deps/egui_wgpu-59e4c8acaf4870d4.d: /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/egui-wgpu-0.28.1/src/lib.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/egui-wgpu-0.28.1/src/renderer.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/egui-wgpu-0.28.1/src/winit.rs /Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/egui-wgpu-0.28.1/src/egui.wgsl
+
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/egui-wgpu-0.28.1/src/lib.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/egui-wgpu-0.28.1/src/renderer.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/egui-wgpu-0.28.1/src/winit.rs:
+/Users/workspace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/egui-wgpu-0.28.1/src/egui.wgsl:
