@@ -1,0 +1,9 @@
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/target/package/bye_orb_rs-0.1.1/target/debug/deps/libonce_cell-771796d3f5371d07.rmeta: /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/once_cell/src/lib.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/once_cell/src/imp_std.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/once_cell/src/race.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/target/package/bye_orb_rs-0.1.1/target/debug/deps/libonce_cell-771796d3f5371d07.rlib: /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/once_cell/src/lib.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/once_cell/src/imp_std.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/once_cell/src/race.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/target/package/bye_orb_rs-0.1.1/target/debug/deps/once_cell-771796d3f5371d07.d: /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/once_cell/src/lib.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/once_cell/src/imp_std.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/once_cell/src/race.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/once_cell/src/lib.rs:
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/once_cell/src/imp_std.rs:
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/once_cell/src/race.rs:

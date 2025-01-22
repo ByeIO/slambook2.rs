@@ -1,0 +1,9 @@
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/target/package/bye_orb_rs-0.1.1/target/debug/deps/libnum_integer-fa44c7f2e1070702.rmeta: /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/num-integer/src/lib.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/num-integer/src/roots.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/num-integer/src/average.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/target/package/bye_orb_rs-0.1.1/target/debug/deps/libnum_integer-fa44c7f2e1070702.rlib: /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/num-integer/src/lib.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/num-integer/src/roots.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/num-integer/src/average.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/target/package/bye_orb_rs-0.1.1/target/debug/deps/num_integer-fa44c7f2e1070702.d: /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/num-integer/src/lib.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/num-integer/src/roots.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/num-integer/src/average.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/num-integer/src/lib.rs:
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/num-integer/src/roots.rs:
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/num-integer/src/average.rs:

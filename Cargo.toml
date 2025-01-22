@@ -52,7 +52,7 @@ approx = "0.5.1"
 bytemuck = "1.21.0"
 thingbuf = "0.1.6"
 
-# rust-cv
+# rust-cv计算机视觉
 cv = { version = "0.6.0" , features = ["default"] }
 cv-core = "0.15.0"
 cv-geom = "0.7.0"
@@ -61,12 +61,16 @@ akaze = "0.7.0"
 eight-point = "0.8.0"
 lambda-twist = "0.7.0"
 image = "0.25.5"
+imageproc = "0.25.0"
 
 # 最小二乘优化
 gomez = "0.5.0"
 
 # 图优化
 factrs = "0.2.0"
+
+# ORB角点检测
+bye_orb_rs = { path = "./static/bye_orb_rs" }
 
 # 依赖覆盖
 [patch.crates-io]

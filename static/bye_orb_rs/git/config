@@ -1,0 +1,13 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "github.ssh"]
+	url = git@github.com:ByeIO/bye.orb.rs.git
+	fetch = +refs/heads/*:refs/remotes/github.ssh/*
+[branch "master"]
+	remote = github.ssh
+	merge = refs/heads/master

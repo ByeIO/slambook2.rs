@@ -939,6 +939,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6099cdc01846bc367c4e7dd630dc5966dccf36b652fae7a74e17b640411a91b2"
 
 [[package]]
+name = "bitvector"
+version = "0.1.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4de5fdcad0b12d843c0b535976ba5f5110ecde436161a7f3cda255674cfc28cb"
+
+[[package]]
 name = "block"
 version = "0.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1024,6 +1030,17 @@ name = "bumpalo"
 version = "3.16.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "79296716171880943b8470b5f8d03aa55eb2e645a4874bdbb28adb49162e012c"
+
+[[package]]
+name = "bye_orb_rs"
+version = "0.1.1"
+dependencies = [
+ "bitvector",
+ "cgmath",
+ "image 0.25.5",
+ "imageproc",
+ "rand 0.8.5",
+]
 
 [[package]]
 name = "bytemuck"
@@ -2166,6 +2183,7 @@ version = "0.1.0"
 dependencies = [
  "akaze",
  "approx 0.5.1",
+ "bye_orb_rs",
  "bytemuck",
  "cv",
  "cv-core",
@@ -2180,6 +2198,7 @@ dependencies = [
  "fastrand 2.3.0",
  "gomez",
  "image 0.25.5",
+ "imageproc",
  "lambda-twist",
  "nalgebra 0.33.2",
  "ndarray 0.16.1",
@@ -3420,6 +3439,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "imageproc"
+version = "0.25.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2393fb7808960751a52e8a154f67e7dd3f8a2ef9bd80d1553078a7b4e8ed3f0d"
+dependencies = [
+ "ab_glyph",
+ "approx 0.5.1",
+ "getrandom",
+ "image 0.25.5",
+ "itertools",
+ "nalgebra 0.32.6",
+ "num",
+ "rand 0.8.5",
+ "rand_distr",
+ "rayon",
+]
+
+[[package]]
 name = "imgref"
 version = "1.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4311,6 +4348,20 @@ checksum = "a4d6ed4e7620a8e4b4779ddbd634154d99ec9e49615f8362e3360996083a24bf"
 dependencies = [
  "image 0.23.14",
  "ndarray 0.13.1",
+]
+
+[[package]]
+name = "num"
+version = "0.4.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "35bd024e8b2ff75562e5f34e7f4905839deb4b22955ef5e73d2fea1b9813cb23"
+dependencies = [
+ "num-bigint",
+ "num-complex 0.4.6",
+ "num-integer",
+ "num-iter",
+ "num-rational 0.4.2",
+ "num-traits",
 ]
 
 [[package]]

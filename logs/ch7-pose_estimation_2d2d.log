@@ -1,0 +1,1792 @@
+提取ORB特征点耗时: 1.915802667s 秒
+匹配ORB特征点耗时: 1.891362875s 秒
+-- 最大距离: 49
+-- 最小距离: 0
+Rotation matrix R is:
+
+  ┌                                     ┐
+  │   0.9395267  -0.3303725  0.09024336 │
+  │   0.3156672  0.93757683  0.14595845 │
+  │   0.1328309  0.10864499 -0.98516613 │
+  └                                     ┘
+
+
+Translation vector t is:
+
+  ┌            ┐
+  │  0.9834142 │
+  │ 0.12497312 │
+  │ 0.13144796 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.84189296 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.37145323 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ -0.839872 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.3636357 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.3906751 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ 0.024765864 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.33097637 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.50963926 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.44546938 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.3858287 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.5691981 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.12353623 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌              ┐
+  │ -0.113518625 │
+  └              ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.39989787 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.16802251 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.19319712 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.39244092 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.12297705 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.12947288 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.08456905 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.07134887 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.3896714 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.39564598 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.23023649 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.2262961 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.81378067 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.40702233 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.44157273 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.40738118 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.44584328 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.5879891 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.39600462 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.3961001 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.1029582 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.3959763 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.39463377 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.2640431 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.3994913 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.3423033 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.7745797 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.39208233 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.13072981 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.14121008 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ -0.599754 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.19227201 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.3558166 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.1485952 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.33491203 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.40025657 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.30278754 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.14194751 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.38851827 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.3888768 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.19313213 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.13731241 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.77055526 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.1107776 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.40443087 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.4709553 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.50090146 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.3169163 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.33079147 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.31624347 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.40638155 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌              ┐
+  │ -0.029633388 │
+  └              ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.44621724 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.8134614 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.1994366 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.08751663 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.20083053 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.3949287 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.44924414 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.63910484 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.46186426 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.23139322 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.52656585 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌          ┐
+  │ 0.223368 │
+  └          ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.19489312 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.11845495 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.57285136 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.22997716 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.35269833 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.11492436 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.3364011 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.31783408 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.20086433 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.57626444 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.03295532 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.5559181 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.14749877 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.7625098 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.25473258 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.25904462 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.08787649 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.27075273 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ 0.050129898 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.13440803 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.19675754 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.23135242 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.10168889 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.53839695 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.04793308 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.24894756 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.12297382 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.2347933 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ 0.090114556 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.33403933 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.39172375 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.7161951 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.2219549 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.39987215 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌              ┐
+  │ -0.050640576 │
+  └              ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.5557717 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.57257336 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.19828567 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.15609276 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.26869476 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.13012794 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.23187889 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.44453865 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.5655732 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.1471333 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.4355119 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌              ┐
+  │ -0.069437504 │
+  └              ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.21926859 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.14639801 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.08314252 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.18135066 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.43518132 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.41324985 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ 0.056014955 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.65946585 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.25209165 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.5870893 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.22510931 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.05200319 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.1774417 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.07741065 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.06626384 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.35279894 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.2010453 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.5734519 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.2017909 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.05098661 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.39297062 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.3082654 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.11952984 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.05648136 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌              ┐
+  │ -0.115768746 │
+  └              ┘
+
+
+Epipolar constraint = 
+  ┌              ┐
+  │ -0.030633777 │
+  └              ┘
+
+
+Epipolar constraint = 
+  ┌               ┐
+  │ -0.0019375682 │
+  └               ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.2938332 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.14003155 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌              ┐
+  │ -0.059713535 │
+  └              ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.35106128 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.29533863 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.13417557 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌              ┐
+  │ -0.031027526 │
+  └              ┘
+
+
+Epipolar constraint = 
+  ┌              ┐
+  │ -0.040133685 │
+  └              ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.77773273 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.19946134 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.38747007 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.18284829 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.41481876 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.25511998 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.50014895 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.5364797 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.5338216 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.41247457 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.08542359 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.24823299 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.06925872 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.73312956 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.66296554 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.24735457 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.7742591 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.8189844 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.12145182 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.8210045 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌              ┐
+  │ -0.025605023 │
+  └              ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.5380314 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.41721922 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.07654141 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.39113104 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.28442985 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.21549305 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.67045367 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.25517648 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.0792571 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.16264978 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.44101185 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.34910446 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.1253581 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.39077264 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.5277949 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.5695683 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.20334212 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.22383069 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.17906705 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.2755583 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.19454055 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.25662103 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.58055097 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.20088713 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.19634905 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.49246213 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.21668139 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.25337335 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.16206294 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ 0.025901586 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.10299292 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.32152477 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.14676784 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.14294387 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.26551428 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.4689245 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.29054064 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌              ┐
+  │ -0.031814992 │
+  └              ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.09424244 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.21849033 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.5248182 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ 0.041938096 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.42874074 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌              ┐
+  │ -0.056105353 │
+  └              ┘
+
+
+Epipolar constraint = 
+  ┌              ┐
+  │ -0.019765973 │
+  └              ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.41456616 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.06547029 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.20255744 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.78362954 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.18394141 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.19383731 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.30244163 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.24831387 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.21341278 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.07749779 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.5102198 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.3932929 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.52577204 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.19515061 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.62186813 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌           ┐
+  │ 0.2996378 │
+  └           ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.19208708 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.14677219 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.13367783 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.6437311 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.25566432 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.7616443 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.23716079 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.66057944 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.4328477 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌              ┐
+  │ -0.035421893 │
+  └              ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.07607286 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.10841912 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ 0.124105826 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.06006509 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.24905917 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.16799076 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.06958595 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.20045975 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌              ┐
+  │ -0.003981188 │
+  └              ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.30002454 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.11716281 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.5833061 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.17539966 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.05935161 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.5914424 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.22861089 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.7524686 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.45678973 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.2531253 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.5444047 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.2548089 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.15058017 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.45695353 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.05240059 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌              ┐
+  │ -0.021848097 │
+  └              ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.36643064 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.25636196 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.37590712 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.22472647 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.2567265 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.09421453 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.16421056 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.41449025 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌              ┐
+  │ -0.041520685 │
+  └              ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.1584174 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.32141358 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.16492806 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ 0.30856156 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌            ┐
+  │ -0.4095041 │
+  └            ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.24240083 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.34210026 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.28224033 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.61742324 │
+  └             ┘
+
+
+Epipolar constraint = 
+  ┌             ┐
+  │ -0.03602484 │
+  └             ┘
+
+

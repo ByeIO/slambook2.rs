@@ -1,0 +1,9 @@
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/target/package/bye_orb_rs-0.1.1/target/debug/deps/libeither-bd83686e6b48f885.rmeta: /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/either/src/lib.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/either/src/iterator.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/either/src/into_either.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/target/package/bye_orb_rs-0.1.1/target/debug/deps/libeither-bd83686e6b48f885.rlib: /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/either/src/lib.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/either/src/iterator.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/either/src/into_either.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/target/package/bye_orb_rs-0.1.1/target/debug/deps/either-bd83686e6b48f885.d: /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/either/src/lib.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/either/src/iterator.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/either/src/into_either.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/either/src/lib.rs:
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/either/src/iterator.rs:
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/either/src/into_either.rs:

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["adaptive_nonmax_suppression","match_indices"],"trait":["Matchable"],"type":["IndexMatch","Point"]};

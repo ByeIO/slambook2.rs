@@ -16,6 +16,8 @@
 #include <chrono>
 #include <sophus/se3.hpp>
 
+// 基于3D-3D点对的相机姿态估计
+
 using namespace std;
 using namespace cv;
 

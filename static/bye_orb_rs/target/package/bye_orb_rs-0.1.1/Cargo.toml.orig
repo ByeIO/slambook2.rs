@@ -1,0 +1,22 @@
+[package]
+name = "bye_orb_rs"
+version = "0.1.1"
+authors = ["patrickisroman qsbye"]
+edition = "2021"
+license = "MIT"
+description = "A Rust library for ORB (Oriented FAST and Rotated BRIEF) keypoints." # 添加描述
+homepage = "https://docs.rs/bye_orb_rs"
+documentation = "https://docs.rs/bye_orb_rs"
+repository = "https://github.com/ByeIO/bye.orb.rs"
+readme = "README.md"
+
+[profile.release]
+opt-level = 3
+
+[dependencies]
+image = "0.25.5"
+imageproc = "0.25.0"
+rand = "0.8.5"
+bitvector = "0.1.5"
+cgmath = "0.18.0"
+

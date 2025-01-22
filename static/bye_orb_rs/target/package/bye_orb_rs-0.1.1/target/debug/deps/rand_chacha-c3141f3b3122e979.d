@@ -1,0 +1,9 @@
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/target/package/bye_orb_rs-0.1.1/target/debug/deps/librand_chacha-c3141f3b3122e979.rmeta: /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/rand_chacha/src/lib.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/rand_chacha/src/chacha.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/rand_chacha/src/guts.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/target/package/bye_orb_rs-0.1.1/target/debug/deps/librand_chacha-c3141f3b3122e979.rlib: /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/rand_chacha/src/lib.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/rand_chacha/src/chacha.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/rand_chacha/src/guts.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/target/package/bye_orb_rs-0.1.1/target/debug/deps/rand_chacha-c3141f3b3122e979.d: /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/rand_chacha/src/lib.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/rand_chacha/src/chacha.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/rand_chacha/src/guts.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/rand_chacha/src/lib.rs:
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/rand_chacha/src/chacha.rs:
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/rand_chacha/src/guts.rs:

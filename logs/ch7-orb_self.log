@@ -1,0 +1,25 @@
+Warning: Pixel index out of bounds: pp(198.43152, 2.1191921), qq(194.01315, -0.22132492)
+Warning: Pixel index out of bounds: pp(196.71202, 18.182919), qq(194.01315, -0.22132492)
+Warning: Pixel index out of bounds: pp(191.61542, 25.667877), qq(194.01315, -0.22132492)
+Warning: Pixel index out of bounds: pp(185.84528, 23.742931), qq(194.01315, -0.22132492)
+Warning: Pixel index out of bounds: pp(196.4015, 12.360239), qq(194.01315, -0.22132492)
+bad/total: 43/500
+Warning: Pixel index out of bounds: pp(232.14029, 2.7388515), qq(228.76848, -0.9531555)
+Warning: Pixel index out of bounds: pp(225.11043, 17.284683), qq(228.76848, -0.9531555)
+Warning: Pixel index out of bounds: pp(217.79047, 22.615538), qq(228.76848, -0.9531555)
+Warning: Pixel index out of bounds: pp(213.00589, 18.859491), qq(228.76848, -0.9531555)
+Warning: Pixel index out of bounds: pp(226.77936, 11.697672), qq(228.76848, -0.9531555)
+Warning: Pixel index out of bounds: pp(230.5354, 6.913101), qq(228.03008, -0.27879333)
+Warning: Pixel index out of bounds: pp(222.2185, 3.9563322), qq(224.63603, -0.53315735)
+Warning: Pixel index out of bounds: pp(232.89746, 19.284735), qq(224.63603, -0.53315735)
+Warning: Pixel index out of bounds: pp(362.58597, 3.280058), qq(359.6446, -0.7632389)
+Warning: Pixel index out of bounds: pp(353.98575, 16.956173), qq(359.6446, -0.7632389)
+Warning: Pixel index out of bounds: pp(346.11954, 21.442009), qq(359.6446, -0.7632389)
+Warning: Pixel index out of bounds: pp(341.78122, 17.17833), qq(359.6446, -0.7632389)
+Warning: Pixel index out of bounds: pp(356.26422, 11.588808), qq(359.6446, -0.7632389)
+Warning: Pixel index out of bounds: pp(360.5279, 7.2504854), qq(358.83594, -0.17496109)
+bad/total: 24/500
+提取ORB耗时: 2.046854125s 秒
+匹配ORB耗时: 40.32075ms 秒
+匹配点数量: 22
+完成.

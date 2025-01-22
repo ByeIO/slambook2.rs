@@ -1,0 +1,8 @@
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/target/package/bye_orb_rs-0.1.1/target/debug/deps/libpaste-304e6c79c581f2a3.dylib: /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/paste/src/lib.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/paste/src/attr.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/paste/src/error.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/paste/src/segment.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/target/package/bye_orb_rs-0.1.1/target/debug/deps/paste-304e6c79c581f2a3.d: /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/paste/src/lib.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/paste/src/attr.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/paste/src/error.rs /Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/paste/src/segment.rs
+
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/paste/src/lib.rs:
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/paste/src/attr.rs:
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/paste/src/error.rs:
+/Users/workspace/Desktop/projects/ByeIO/software/exp112-rust-orb-hello/static/orbrs/vendor/paste/src/segment.rs:
