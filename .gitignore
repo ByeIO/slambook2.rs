@@ -4,3 +4,6 @@ target/*
 # 忽略超大日志文件
 logs/ch9*
 
+# 忽略大文件
+vendor/*
+

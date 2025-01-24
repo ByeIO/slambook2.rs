@@ -67,7 +67,8 @@ imageproc = "0.25.0"
 gomez = "0.5.0"
 
 # 图优化
-factrs = "0.2.0"
+factrs = { version = "0.2.0", features = [] }
+gs-rs = { version = "0.1.0", path = "./static/gs-rs" }
 
 # ORB角点检测
 bye_orb_rs = { path = "./static/bye_orb_rs" }
@@ -75,3 +76,4 @@ bye_orb_rs = { path = "./static/bye_orb_rs" }
 # 依赖覆盖
 [patch.crates-io]
 pulp = { path = "./static/pulp" }
+mio = { path = "./static/mio", version = "1.0.3" }
