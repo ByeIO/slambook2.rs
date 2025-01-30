@@ -1,0 +1,76 @@
+[package]
+name = "robotics"
+version = "0.1.5"
+edition = "2021"
+license = "MIT"
+description = "Rust implementation of robotics algorithms"
+authors = [ "Jean-Gabriel Simard <jeangab23@gmail.com>" ]
+repository = "https://github.com/jgsimard/RustRobotics"
+exclude = ["dataset/*"]
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+nalgebra = {version = "0.32", features=["rand-no-std"]}
+plotters = "0.3"
+csv = "1.3"
+serde = { version = "1.0", features = ["derive"] }
+rustc-hash = "1.1"
+rand = "0.8"
+rand_distr = "0.4"
+russell_lab = "0.7"
+russell_sparse = "0.7"
+plotpy = "0.5"
+rayon = "1.7"
+faer = "0.18" # fast linear algebra
+# # python
+# pyo3 = { version = "0.18", features = ["extension-module"] }
+# numpy = {version = "0.18", features = ["nalgebra"] }
+
+[dev-dependencies]
+criterion = "0.5"
+approx = "0.5"
+dialoguer = "0.11"
+
+[profile.dev.package.faer]
+opt-level = 3
+
+[lib]
+name = "robotics"
+# crate-type = ["cdylib", "lib"] # cdylib=python, lib=rust
+crate-type = ["lib"] # cdylib=python, lib=rust
+
+[profile.dev]
+opt-level = 1
+debug = 2
+incremental = true
+codegen-units = 512
+
+[profile.release]
+debug = true
+
+[[example]]
+name = "localization"
+path = "examples/localization/bayesian_filter.rs"
+
+[[example]]
+name = "localization_landmarks"
+path = "examples/localization/localization_landmarks.rs"
+
+[[example]]
+name = "pose_graph_optimization"
+path = "examples/mapping/pose_graph_optimization.rs"
+
+[[example]]
+name = "inverted_pendulum"
+path = "examples/control/inverted_pendulum.rs"
+
+
+[[bench]]
+name = "kalman_filter"
+harness = false
+
+[[bench]]
+name = "graph_slam"
+harness = false

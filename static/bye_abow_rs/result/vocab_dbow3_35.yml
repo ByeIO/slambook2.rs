@@ -1,0 +1,15 @@
+%YAML 1.0
+vocabulary:
+    k: 3
+    L: 3
+    scoringType: 0
+    weightingType: 0
+    nodes:
+        - { nodeId:1, parentId:0, weight:1, descriptor:"251 127 20 24 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" }
+        - { nodeId:2, parentId:0, weight:1, descriptor:"250 118 36 56 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" }
+    words:
+        - { wordId:1, nodeId:0 }
+        - { wordId:0, nodeId:1 }
+        - { wordId:1, nodeId:2 }
+        - { wordId:0, nodeId:3 }
+        - { wordId:1, nodeId:4 }

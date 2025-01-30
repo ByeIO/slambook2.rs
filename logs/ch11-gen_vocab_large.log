@@ -1,0 +1,14 @@
+检测 ORB 特征...
+创建词汇表...
+词汇表信息: Vocabulary {
+    Word/Leaf Nodes: 594,
+    Other Nodes: 88,
+    Levels: 3,
+    Branching Factor: 9,
+    Total Training Features: 1700,
+    Min Word Cluster Size: 1,
+    Max Word Cluster Size: 34,
+    Mean Word Cluster Size: 2,
+    Median Word Cluster Size: 1,
+}
+完成

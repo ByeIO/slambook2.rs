@@ -1,0 +1,20 @@
+%YAML 1.0
+vocabulary:
+    k: 10
+    L: 5
+    scoringType: 0
+    weightingType: 0
+    nodes:
+        - { nodeId:1, parentId:0, weight:0.,
+            descriptor:"0 32 27 159 99 205 118 146 238 119 125 72 94 230 121 238 182 228 126 239 23 237 197 184 37 239 54 110 170 128 47 174 121 221 " }
+        - { nodeId:2, parentId:0, weight:0.,
+            descriptor:"0 32 0 141 27 249 52 207 99 119 116 1 110 0 183 19 32 96 120 58 6 8 59 184 113 63 229 175 50 64 48 136 224 168 " }
+        - { nodeId:3, parentId:0, weight:0.,
+            descriptor:"0 32 88 89 255 245 34 66 127 48 164 206 214 162 253 55 129 115 102 245 125 234 233 209 177 108 243 235 238 128 36 176 37 121 " }
+    words:
+        - { wordId:0, nodeId:31 }
+        - { wordId:1, nodeId:32 }
+        - { wordId:2, nodeId:33 }
+        - { wordId:3, nodeId:34 }
+        - { wordId:4, nodeId:35 }
+        - { wordId:5, nodeId:36 }

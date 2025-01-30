@@ -1,0 +1,45 @@
+[package]
+name = "bye_abow_rs"
+version = "0.1.1"
+edition = "2021"
+# license-file = "LICENSE"
+license = "MIT"
+authors = ["qsbye","Alex Maiorella"]
+description = "Visual bag of words for fast image matching without opencv."
+homepage = "https://docs.rs/bye_abow_rs"
+documentation = "https://docs.rs/bye_abow_rs"
+repository = "https://github.com/ByeIO/bye.abow.rs"
+keywords = ["slam", "bag-of-words", "visual-odometry", "dbow", "loop-closure"]
+categories  = ["algorithms", "computer-vision", "mathematics", "science"]
+readme = "README.md"
+# 排除大文件(crates.io限制10MB以内)
+exclude = ["assets/test", "assets/train", "git", "target", "static/bye_orb_rs/target", "static/bye_orb_rs/git"]
+
+[dependencies]
+# ORB角点检测
+bye_orb_rs = { version = "0.1.3", path = "./static/bye_orb_rs" }
+
+# 随机数
+rand = "0.9.0"
+# 包含Beta, Binomial, Cauchy, ChiSquared, Dirichlet, Exponential, FisherF, Gamma, Geometric, Hypergeometric, InverseGaussian, LogNormal, Normal, Pareto, PERT, Poisson, StudentT, Triangular 和 Weibull 算法
+rand_distr = "0.4.3"
+
+# std::vec容器扩展
+smallvec = { version = "1.13.2", features = ["serde"] }
+bincode = "1.3.3"
+bitvec = "1.0.1"
+
+# 错误处理
+thiserror = "2.0.11"
+
+# 图像处理
+image = "0.25.5"
+imageproc = "0.25.0"
+
+# 序列化
+serde = { version = "1.0.217", features = ["derive"] }
+serde_yml = "0.0.12"
+
+# gz压缩/解压
+flate2 = { version = "1.0.35", features = ["rust_backend", "any_impl", "miniz_oxide"] }
+

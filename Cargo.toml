@@ -71,7 +71,10 @@ factrs = { version = "0.2.0", features = [] }
 gs-rs = { version = "0.1.0", path = "./static/gs-rs" }
 
 # ORB角点检测
-bye_orb_rs = { path = "./static/bye_orb_rs" }
+bye_orb_rs = { version = "0.1.1", path = "./static/bye_orb_rs" }
+
+# 词袋
+bye_abow_rs = { version = "0.1.0", path = "./static/bye_abow_rs" }
 
 # 依赖覆盖
 [patch.crates-io]

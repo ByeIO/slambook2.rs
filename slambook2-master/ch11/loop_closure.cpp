@@ -12,6 +12,7 @@ using namespace std;
 /***************************************************
  * 本节演示了如何根据前面训练的字典计算相似性评分
  * ************************************************/
+
 int main(int argc, char **argv) {
     // read the images and database  
     cout << "reading database" << endl;
