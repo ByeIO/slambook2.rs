@@ -76,6 +76,10 @@ bye_orb_rs = { version = "0.1.1", path = "./static/bye_orb_rs" }
 # 词袋
 bye_abow_rs = { version = "0.1.0", path = "./static/bye_abow_rs" }
 
+# 八叉树占据地图
+bye_octomap_rs = { version = "0.1.1" }
+# bye_octomap_rs = { path = "./static/bye_octomap_rs" }
+
 # 依赖覆盖
 [patch.crates-io]
 pulp = { path = "./static/pulp" }

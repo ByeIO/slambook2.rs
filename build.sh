@@ -6,3 +6,5 @@ RUST_BACKTRACE=1 cargo run --example ch8-optical_flow > logs/ch8-optical_flow.lo
 RUST_BACKTRACE=1 cargo run --example ch9-bundle_adjustment_g2o > logs/ch9-bundle_adjustment_g2o.log
 RUST_BACKTRACE=1 cargo run --example ch10-pose_graph_g2o_SE3
 RUST_BACKTRACE=1 cargo run --example ch10-pose_graph_g2o_lie_algebra > logs/ch10-pose_graph_g2o_lie_algebra
+cargo run --example ch12-dense_mono-dense_mapping_image > /dev/null
+cargo build --example ch12-dense_mono-dense_mapping_image

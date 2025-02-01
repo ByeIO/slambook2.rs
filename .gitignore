@@ -3,7 +3,11 @@ target/*
 
 # 忽略超大日志文件
 logs/ch9*
+logs/ch12*
 
 # 忽略大文件
 vendor/*
+
+# 忽略运行结果
+result/ch12-dense_mono_dense_mapping/*
 

@@ -14,15 +14,18 @@
 
 //! 本程序演示了单目相机在已知轨迹下的稠密深度估计，
 //! 使用极线搜索 + NCC 匹配的方式，与书本的 12.2 节对应。
+//! 添加了图像保存到文件的功能。
 
 use std::fs::File;
 use std::io::{self, BufRead, Write, BufReader, Cursor};
 use std::path::Path;
+use std::fs::create_dir_all;
 
 use std::cell::{
     RefMut, Ref, RefCell
 };
 
+// 线性代数
 use nalgebra::{
     Quaternion, Vector3, Matrix3, UnitQuaternion, 
     Isometry3, Translation3, Const,
@@ -31,6 +34,7 @@ use nalgebra::{
     Vector6, Matrix6, Vector2, Matrix2, 
 };
 
+// 李代数
 use factrs::{
     assign_symbols,
     core::{BetweenResidual, GaussNewton, Graph, Values},
@@ -44,10 +48,21 @@ use factrs::{
     optimizers::{LevenMarquardt}
 };
 
+// 图像处理
 use image::{
-    DynamicImage, GrayImage, ImageBuffer, Luma
+    DynamicImage, GrayImage, ImageBuffer, Luma, 
+    GenericImageView, Rgb, RgbImage, 
+    buffer::ConvertBuffer,
 };
-use imageproc::drawing::draw_cross_mut;
+use imageproc::drawing::{
+    draw_cross_mut, draw_filled_circle_mut, draw_line_segment_mut,
+};
+
+// 随机数
+use rand::Rng;
+use rand_distr::{
+    Distribution, Normal
+};
 
 // 边缘宽度
 const BOARDER: i32 = 20;     
@@ -68,6 +83,8 @@ const NCC_AREA: i32 = (2 * NCC_WINDOW_SIZE + 1) * (2 * NCC_WINDOW_SIZE + 1);
 const MIN_COV: f64 = 0.1;        
 // 发散判定：最大方差
 const MAX_COV: f64 = 10.0;    
+// 图像保存目录
+const OUTPUT_DIR: &str = "./result/ch12-dense_mono_dense_mapping";
 
 // 从 REMODE 数据集读取数据
 fn read_dataset_files(
@@ -143,6 +160,7 @@ fn epipolar_search(
     epipolar_direction.normalize();
     let half_length = 0.5 * epipolar_line.norm();
 
+    // 在极线上搜索，以深度均值点为中心，左右各取半长度
     let mut best_ncc = -1.0;
     let mut best_px_curr = Vector2::zeros();
 
@@ -302,9 +320,71 @@ fn update_depth_filter(
     true
 }
 
+// 显示并保存极线匹配
+fn show_epipolar_match(ref_img: &GrayImage, curr_img: &GrayImage, px_ref: (i32, i32), px_curr: (i32, i32), index: usize, output_dir: &Path) {
+    let mut ref_show : RgbImage = ref_img.convert();
+    let mut curr_show : RgbImage = curr_img.convert();
+
+    draw_filled_circle_mut(&mut ref_show, px_ref, 5, Rgb([0, 255, 0]));
+    draw_filled_circle_mut(&mut curr_show, px_curr, 5, Rgb([255, 0, 0]));
+
+    let rand_number = rand::random::<u32>() % 1000;
+    ref_show.save(output_dir.join(format!("ref_match_{index}_{rand_number}.png"))).unwrap();
+    curr_show.save(output_dir.join(format!("curr_match_{index}_{rand_number}.png"))).unwrap();
+}
+
+// 显示并保存极线
+fn show_epipolar_line(ref_img: &GrayImage, curr_img: &GrayImage, px_ref: (f32, f32), px_min_curr: (f32, f32), px_max_curr: (f32, f32), index: usize, output_dir: &Path) {
+    let mut curr_show : RgbImage = curr_img.convert();
+
+    draw_line_segment_mut(&mut curr_show, px_min_curr, px_max_curr, Rgb([0, 255, 0])); //极线
+    draw_filled_circle_mut(&mut curr_show, (px_ref.0 as i32, px_ref.1 as i32), 5, Rgb([255, 0, 0])); // 参考点
+    let rand_number = rand::random::<u32>() % 1000;
+    curr_show.save(output_dir.join(format!("epipolar_line_{index}_{rand_number}.png"))).unwrap();
+}
+
+// 评估深度估计
+fn evaluate_depth(depth_truth: &ImageBuffer<Luma<f64>, Vec<f64>>, depth_estimate: &ImageBuffer<Luma<f64>, Vec<f64>>) {
+    let mut error_sum = 0.0;
+    let mut error_sq_sum = 0.0;
+    let mut count = 0;
+
+    for (x, y, pixel) in depth_truth.enumerate_pixels() {
+        let est_pixel = depth_estimate.get_pixel(x, y)[0];
+        let error = pixel[0] - est_pixel;
+        error_sum += error;
+        error_sq_sum += error * error;
+        count += 1;
+    }
+
+    let avg_error = error_sum / count as f64;
+    let avg_sq_error = error_sq_sum / count as f64;
+
+    println!("Average Error: {avg_error}, Average Squared Error: {avg_sq_error}");
+}
+
+// 保存深度图可视化
+fn save_depth_image(depth_image: &ImageBuffer<Luma<f64>, Vec<f64>>, file_path: &Path) {
+    let max_depth = depth_image.pixels().map(|p| p[0]).fold(f64::MIN, f64::max);
+    let scale_factor = 255.0 / max_depth;
+    let buffer: Vec<u8> = depth_image
+        .pixels()
+        .map(|p| (p[0] * scale_factor) as u8)
+        .collect();
+    let new_img = GrayImage::from_raw(depth_image.width(), depth_image.height(), buffer).unwrap();
+    new_img.save(file_path).unwrap();
+}
+
 // 主函数
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("程序开始执行...");
+    // 判断图像保存目录是否存在
+    let output_dir = Path::new(OUTPUT_DIR);
+    if !output_dir.exists() {
+        create_dir_all(output_dir)?;
+    }
+
+    // 加载数据集
     let path = "./assets/ch12-REMODE";
     let mut color_image_files = Vec::new();
     let mut poses = Vec::new();
@@ -339,9 +419,16 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
                 if epipolar_search(&ref_img, &curr_img, &pose_t_c_r, &pt_ref, depth.get_pixel(x as u32, y as u32)[0], depth_cov, &mut pt_curr, &mut epipolar_direction) {
                     update_depth_filter(&pt_ref, &pt_curr, &pose_t_c_r, &epipolar_direction, &mut depth, &mut depth_cov2);
+                    // 显示极线(线段)
+                    show_epipolar_line(&ref_img, &curr_img, (x as f32, y as f32), (pt_curr.x as f32, pt_curr.y as f32), (pt_curr.x as f32 + epipolar_direction.x as f32, pt_curr.y as f32 + epipolar_direction.y as f32), index, output_dir);
+                    // 显示极线匹配
+                    show_epipolar_match(&ref_img, &curr_img, (x, y), (pt_curr.x as i32, pt_curr.y as i32), index + 1, output_dir);
                 }
             }
         }
+        evaluate_depth(&ref_depth, &depth);
+        let rand_number = rand::random::<u32>() % 1000;
+        save_depth_image(&depth, &output_dir.join(format!("depth_{index}_{rand_number}.png")));
     }
 
     println!("程序执行完成");
