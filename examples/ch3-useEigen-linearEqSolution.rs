@@ -1,6 +1,8 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
 #![allow(unused_imports)]
+#![allow(unused_assignments)]
+
 extern crate nalgebra as na;
 extern crate rand;
 use na::{DMatrix, DVector, Matrix3, Vector3, SVector, Matrix, VecStorage, Dyn};

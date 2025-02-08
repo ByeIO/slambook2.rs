@@ -1,3 +1,7 @@
+#![allow(unused_imports)]
+#![allow(non_snake_case)]
+#![allow(unused_assignments)]
+
 // ch3-useNalgebra
 // 稠密矩阵的代数运算(逆,特征值等)
 // 测试Matrix,Vector3,Vector2,OVector基本类型的使用
@@ -98,4 +102,3 @@ fn main() {
     println!("time of Cholesky decomposition is {}ms", start_time.elapsed().as_millis());
     println!("x = {}", x.transpose());
 }
-

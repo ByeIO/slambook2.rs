@@ -80,6 +80,9 @@ bye_abow_rs = { version = "0.1.0", path = "./static/bye_abow_rs" }
 bye_octomap_rs = { version = "0.1.1" }
 # bye_octomap_rs = { path = "./static/bye_octomap_rs" }
 
+# 点云处理
+bye_pcl_rs = { version = "0.1.0" }
+
 # 依赖覆盖
 [patch.crates-io]
 pulp = { path = "./static/pulp" }

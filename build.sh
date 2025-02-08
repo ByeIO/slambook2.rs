@@ -8,3 +8,4 @@ RUST_BACKTRACE=1 cargo run --example ch10-pose_graph_g2o_SE3
 RUST_BACKTRACE=1 cargo run --example ch10-pose_graph_g2o_lie_algebra > logs/ch10-pose_graph_g2o_lie_algebra
 cargo run --example ch12-dense_mono-dense_mapping_image > /dev/null
 cargo build --example ch12-dense_mono-dense_mapping_image
+cargo run --example ch12-dense_RGBD-surfel_mapping > logs/ch12-dense_RGBD-surfel_mapping.log

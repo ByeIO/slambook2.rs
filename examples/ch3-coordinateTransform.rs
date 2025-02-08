@@ -7,6 +7,7 @@
 #![allow(rustdoc::missing_crate_level_docs)]
 #![allow(unsafe_code)]
 #![allow(clippy::undocumented_unsafe_blocks)]
+#![allow(non_snake_case)]
 
 use nalgebra::{
     Matrix3, Vector3, UnitQuaternion, 
