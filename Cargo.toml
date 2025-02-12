@@ -81,7 +81,8 @@ bye_octomap_rs = { version = "0.1.1" }
 # bye_octomap_rs = { path = "./static/bye_octomap_rs" }
 
 # 点云处理
-bye_pcl_rs = { version = "0.1.1" }
+# bye_pcl_rs = { version = "0.1.2" }
+bye_pcl_rs = { version = "0.1.3", path="./static/bye_pcl_rs" }
 
 # 依赖覆盖
 [patch.crates-io]

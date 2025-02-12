@@ -1,0 +1,13 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "github.ssh"]
+	url = git@github.com:ByeIO/bye.pcl.rs.git
+	fetch = +refs/heads/*:refs/remotes/github.ssh/*
+[branch "rust"]
+	remote = github.ssh
+	merge = refs/heads/rust
