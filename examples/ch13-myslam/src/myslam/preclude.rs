@@ -17,7 +17,7 @@
 // 标准库
 use std::sync::{
     atomic::{AtomicBool, Ordering},
-    Condvar, Mutex,
+    Condvar, Mutex, Arc, Weak,
 };
 use std::thread;
 use std::time::Duration;
