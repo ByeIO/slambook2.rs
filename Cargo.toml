@@ -4,10 +4,12 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+# 日志
 env_logger = { version = "0.11.6", default-features = false, features = [
     "auto-color",
     "humantime",
 ] }
+log = { version = "0.4.25", features = ["serde"] }
 
 # 随机数
 rand = "0.8.5"
@@ -84,11 +86,18 @@ bye_octomap_rs = { version = "0.1.1" }
 # bye_pcl_rs = { version = "0.1.2" }
 bye_pcl_rs = { version = "0.1.3", path="./static/bye_pcl_rs" }
 
+# YAML解析
+yaml-rust2 = { version = "0.10.0" }
+
 # 依赖覆盖
 [patch.crates-io]
 pulp = { path = "./static/pulp" }
 mio = { path = "./static/mio", version = "1.0.3" }
+cocoa = {path = "./static/cocoa-0.18.5", version = "0.18.5" }
+winit = {path = "./static/winit-0.18.1", version = "0.18.1" }
+ncollide3d = { path = "./static/ncollide3d-0.24.0", version = "0.24.0" }
 
+# 最大示例项目
 [[example]]
 name = "ch13-myslam"
 path = "examples/ch13-myslam/src/main.rs"

@@ -18,7 +18,7 @@ use factrs::{
     traits::*,
     variables::{VectorVar2, SE2, VectorVar3, SE3, SO2, SO3, MatrixLieGroup},
     containers::Key,
-    noise::{GaussianNoise}
+    noise::{GaussianNoise},
 };
 
 use nalgebra::{
