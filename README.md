@@ -1,4 +1,4 @@
-# slambook2的rust重构
+# slambook2的rust🔥重构
 本项目是对[https://github.com/gaoxiang12/slambook2]的rust重构.
 很多bug😂和todo🧾, 有些实现可能比较简略😄.
 已经将很多算法用rust重写了.
@@ -6,13 +6,20 @@
 ## 使用说明
 ### 工程目录
 - Cargo.toml : 编译配置文件
-- examples文件夹
-- src文件夹
+- examples文件夹 : slambook2的1~13章用rust重构的代码
+- src文件夹 : (忽略)
 - deprecated文件夹 : 弃用的zig语言方案
-
-Cargo.lock	README.md	deprecated	logs		reference	static		vendor
-Cargo.toml	assets		examples	prebuilt	result		target		问题
-LICENSE		build.sh	justfile	python		src		tools		文档链接.md
+- assets文件夹 : 代码运行需要用到的资源文件(裁剪过的数据集, 配置文件等)
+- logs文件夹 : 代码运行日志输出(有些文件过大, git忽略了)
+- prebuilt文件夹 : 预构建wasm二进制
+- python文件夹 : 验证效果的python脚本, python结果应该接近原版cpp代码
+- reference文件夹 : 参考代码
+- result文件夹 : 代码运行输出文件
+- static文件夹 : 修改的依赖库以及自制的库
+- target文件夹 : 编译输出
+- tools文件夹 : 小工具(空的)
+- vendor文件夹 : 编译项目所需的所有依赖包
+- `问题`文件夹 : 开发日志
 
 ### 预构建文件
 >有1000多个crate需要编译, 有可能会由于各种原因编译失败,因而提供预构建的wasm版本,理论上支持全平台.
@@ -31,8 +38,20 @@ $v="v4.3.6"; iwr https://win.wasmer.io -useb | iex
 
 2. 使用wasmer运行时运行wasm二进制(仅测试了4.3.6版本)
 ```sh
-
+wasmer run 
 ```
+
+### 开发笔记(博客)
+1. [折腾笔记[5]-使用rust解矩阵方程](https://www.cnblogs.com/qsbye/p/18668728)
+2. [折腾笔记[6]-使用rust绘制三维画面](https://www.cnblogs.com/qsbye/p/18679035)
+3. [折腾笔记[7]-使用rust进行李代数计算](https://www.cnblogs.com/qsbye/p/18680593)
+4. [折腾笔记[8]-使用rust去除灰度图的畸变](https://www.cnblogs.com/qsbye/p/18682672)
+5. [折腾笔记[9]-使用rust通过图优化进行曲线拟合](https://www.cnblogs.com/qsbye/p/18684882)
+6. [折腾笔记[10]-使用rust进行ORB角点检测](https://www.cnblogs.com/qsbye/p/18686371)
+7. [折腾笔记[11]-使用rust进行直接法视觉里程计估计](https://www.cnblogs.com/qsbye/p/18687596)
+8. [折腾笔记[12]-使用rust进行位姿图优化](https://www.cnblogs.com/qsbye/p/18689543)
+9. [折腾笔记[13]-使用rust对图像建立词袋](https://www.cnblogs.com/qsbye/p/18695283)
+10. [折腾笔记[14]-使用rust进行深度估计](https://www.cnblogs.com/qsbye/p/18695752)
 
 ## 编译
 ### 编译器版本
