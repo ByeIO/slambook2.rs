@@ -16,7 +16,8 @@ use std::path::Path;
 use std::cell::{
     RefMut, Ref, RefCell
 };
-use std::sync::{Arc, Mutex, Weak};
+use std::sync::{Arc, Mutex, Weak, RwLock};
+use std::borrow::{Borrow, BorrowMut};
 
 // 使用内部库
 use super::feature::Feature;
@@ -25,6 +26,7 @@ use super::camera::Camera;
 
 /// 帧
 /// 每一帧分配独立id，关键帧分配关键帧ID
+#[derive(Debug)]
 pub struct Frame {
     /// 此帧的唯一 ID
     pub id_: u64,
@@ -43,9 +45,9 @@ pub struct Frame {
     /// 右图像
     pub right_img_: OMatrix<i32, Dyn, Dyn>,
     /// 左图像中提取的特征
-    pub features_left_: RefCell<Vec<Arc<Feature>>>,
+    pub features_left_: RwLock<Vec<Arc<Feature>>>,
     /// 右图像中对应的特征，如果没有对应则为 None
-    pub features_right_: RefCell<Vec<Option<Arc<Feature>>>>,
+    pub features_right_: RwLock<Vec<Option<Arc<Feature>>>>,
 }
 
 impl Frame {
@@ -61,8 +63,8 @@ impl Frame {
             // 使用 OMatrix::zeros 初始化矩阵
             left_img_: OMatrix::default(),
             right_img_: OMatrix::default(),
-            features_left_: RefCell::new(Vec::new()),
-            features_right_: RefCell::new(Vec::new()),
+            features_left_: RwLock::new(Vec::new()),
+            features_right_: RwLock::new(Vec::new()),
         }
     }
 
@@ -77,25 +79,25 @@ impl Frame {
             pose_mutex_: Mutex::new(()),
             left_img_: left,
             right_img_: right,
-            features_left_: RefCell::new(Vec::new()),
-            features_right_: RefCell::new(Vec::new()),
+            features_left_: RwLock::new(Vec::new()),
+            features_right_: RwLock::new(Vec::new()),
         }
     }
 
     /// 获取帧的位姿，线程安全
-    pub fn Pose(&self) -> SE3 {
+    pub fn pose(&self) -> SE3 {
         let _lck = self.pose_mutex_.lock().unwrap();
         self.pose_.clone()
     }
 
     /// 设置帧的位姿，线程安全
-    pub fn SetPose(&mut self, pose: &SE3) {
+    pub fn set_pose(&mut self, pose: &SE3) {
         let _lck = self.pose_mutex_.lock().unwrap();
         self.pose_ = pose.clone();
     }
 
     /// 设置关键帧并分配关键帧 ID
-    pub fn SetKeyFrame(&mut self) {
+    pub fn set_key_frame(&mut self) {
         static mut KEYFRAME_FACTORY_ID: u64 = 0;
         self.is_keyframe_ = true;
         unsafe {
@@ -105,7 +107,7 @@ impl Frame {
     }
 
     /// 工厂构建模式，分配 ID
-    pub fn CreateFrame() -> Arc<Frame> {
+    pub fn create_frame() -> Arc<Frame> {
         static mut FACTORY_ID: u64 = 0;
         let new_frame = Arc::new(Frame::new());
         unsafe {
@@ -185,7 +187,7 @@ mod tests1 {
     #[test]
     fn test_pose() {
         let frame = Frame::new();
-        let pose = frame.Pose();
+        let pose = frame.pose();
         // 验证获取的位姿与帧的初始位姿一致
         assert!(se3_approx_eq(&pose, &SE3::identity(), 1e-6, 1e-6));
     }
@@ -195,8 +197,8 @@ mod tests1 {
     fn test_set_pose() {
         let mut frame = Frame::new();
         let new_pose = SE3::identity();
-        frame.SetPose(&new_pose);
-        let pose = frame.Pose();
+        frame.set_pose(&new_pose);
+        let pose = frame.pose();
         // 验证设置位姿后，获取的位姿与设置的位姿一致
         assert!(se3_approx_eq(&pose, &new_pose, 1e-6, 1e-6));
     }
@@ -205,7 +207,7 @@ mod tests1 {
     #[test]
     fn test_set_key_frame() {
         let mut frame = Frame::new();
-        frame.SetKeyFrame();
+        frame.set_key_frame();
         // 验证设置关键帧后，帧的 is_keyframe_ 标志为 true
         assert!(frame.is_keyframe_);
         // 验证设置关键帧后，帧的关键帧 ID 不为 0
@@ -215,8 +217,8 @@ mod tests1 {
     /// 测试工厂构建模式
     #[test]
     fn test_create_frame() {
-        let frame1 = Frame::CreateFrame();
-        let frame2 = Frame::CreateFrame();
+        let frame1 = Frame::create_frame();
+        let frame2 = Frame::create_frame();
         // 验证通过工厂模式创建的两个帧的 ID 不同
         assert_ne!(frame1.id_, frame2.id_);
     }

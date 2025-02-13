@@ -16,7 +16,8 @@ use std::path::Path;
 use std::cell::{
     RefMut, Ref, RefCell
 };
-use std::sync::{Weak, Arc, Mutex};
+use std::sync::{Weak, Arc, Mutex, RwLock};
+use std::borrow::{Borrow, BorrowMut};
 
 // 使用内置库
 use super::frame::Frame;
@@ -24,6 +25,7 @@ use super::feature::Feature;
 
 /// 路标点类
 /// 特征点在三角化之后形成路标点
+#[derive(Debug)]
 pub struct MapPoint {
     /// 地图点的唯一ID
     pub id_: u64,
@@ -36,7 +38,7 @@ pub struct MapPoint {
     /// 被特征匹配算法观测到的次数
     pub observed_times_: u32,
     /// 观测到该地图点的特征列表
-    pub observations_: RefCell<Vec<Weak<Feature>>>,
+    pub observations_: RwLock<Vec<Weak<Feature>>>,
 }
 
 impl MapPoint {
@@ -48,7 +50,7 @@ impl MapPoint {
             pos_: Vec3::zeros(),
             data_mutex_: Mutex::new(()),
             observed_times_: 0,
-            observations_: RefCell::new(Vec::new()),
+            observations_: RwLock::new(Vec::new()),
         }
     }
 
@@ -60,33 +62,34 @@ impl MapPoint {
             pos_: position,
             data_mutex_: Mutex::new(()),
             observed_times_: 0,
-            observations_: RefCell::new(Vec::new()),
+            observations_: RwLock::new(Vec::new()),
         }
     }
 
     /// 获取地图点在世界坐标系下的位置
-    pub fn Pos(&self) -> Vec3 {
+    pub fn pos(&self) -> Vec3 {
         let _lck = self.data_mutex_.lock().unwrap();
         self.pos_
     }
 
     /// 设置地图点在世界坐标系下的位置
-    pub fn SetPos(&mut self, pos: &Vec3) {
+    pub fn set_pos(&mut self, pos: &Vec3) {
         let _lck = self.data_mutex_.lock().unwrap();
         self.pos_ = *pos;
     }
 
     /// 添加一个对该地图点的观测
-    pub fn AddObservation(&mut self, feature: Arc<Feature>) {
+    pub fn add_observation(&mut self, feature: Arc<Feature>) {
         let _lck = self.data_mutex_.lock().unwrap();
-        self.observations_.borrow_mut().push(Arc::downgrade(&feature));
+        let mut obs = self.observations_.write().unwrap();
+        obs.push(Arc::downgrade(&feature));
         self.observed_times_ += 1;
     }
 
     /// 移除一个对该地图点的观测
-    pub fn RemoveObservation(&mut self, feat: Arc<Feature>) {
+    pub fn remove_observation(&mut self, feat: Arc<Feature>) {
         let _lck = self.data_mutex_.lock().unwrap();
-        let mut obs = self.observations_.borrow_mut();
+        let mut obs = self.observations_.write().unwrap();
         if let Some(index) = obs.iter().position(|x| {
             let upgraded = x.upgrade();
             if let Some(upgraded_feat) = upgraded {
@@ -96,20 +99,20 @@ impl MapPoint {
             }
         }) {
             obs.remove(index);
-            // 使用 RefCell 来修改 map_point_
-            *feat.map_point_.borrow_mut() = Weak::new();
+            feat.reset_map_point();
             self.observed_times_ -= 1;
         }
     }
 
     /// 获取观测到该地图点的特征列表
-    pub fn GetObs(&self) -> Vec<Weak<Feature>> {
+    pub fn get_obs(&self) -> Vec<Weak<Feature>> {
         let _lck = self.data_mutex_.lock().unwrap();
-        self.observations_.borrow().clone()
+        let obs = self.observations_.read().unwrap();
+        obs.clone()
     }
 
     /// 工厂函数，用于创建新的地图点
-    pub fn CreateNewMappoint() -> Arc<MapPoint> {
+    pub fn create_new_mappoint() -> Arc<MapPoint> {
         static mut FACTORY_ID: u64 = 0;
         let mut new_mappoint = MapPoint::new();
         unsafe {

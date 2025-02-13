@@ -1,0 +1,28 @@
+[package]
+name = "slam-cv"
+version = "0.1.3"
+authors = ["h <besqer996@gnu.ac.kr>"]
+edition = "2018"
+
+description = "Simple CV traits for VO (SLAM)."
+homepage = "https://github.com/podo-os"
+readme = "README.md"
+license = "BSD-3-Clause"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = ["cv-core", "serde"]
+
+podo = ["podo-core-driver"]
+
+[dependencies]
+crossbeam = "0.7"
+image = "0.23"
+nalgebra = "0.21"
+num = "0.2"
+podo-core-driver = { version = "0.3", optional = true }
+serde = { version = "1", optional = true }
+simba = "0.1"
+
+cv-core = { version = "0.10", optional = true }

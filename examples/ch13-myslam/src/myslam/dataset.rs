@@ -119,77 +119,81 @@ impl Dataset {
         let mut right_path = String::new();
         write!(&mut left_path, "{}/image_0/{:06}.png", self.dataset_path, self.current_image_index).unwrap();
         write!(&mut right_path, "{}/image_1/{:06}.png", self.dataset_path, self.current_image_index).unwrap();
+        
+        unimplemented!()
+        
+        // kitti数据集为hdf5格式
 
-        /* start 使用image库转换 */
+        // /* start 使用image库转换 */
         
-        let current_image_index = 0;
+        // let current_image_index = 0;
         
-        // 读取左右图像
-        let image_left = match image::open(left_path) {
-            Ok(img) => img.grayscale(),
-            Err(_) => {
-                warn!("cannot find images at index {}", current_image_index);
-                // return;
-            }
-        };
-        let image_right = match image::open(right_path) {
-            Ok(img) => img.grayscale(),
-            Err(_) => {
-                warn!("cannot find images at index {}", current_image_index);
-                // return;
-            }
-        };
+        // // 读取左右图像
+        // let image_left = match image::open(left_path) {
+        //     Ok(img) => img.grayscale(),
+        //     Err(_) => {
+        //         warn!("cannot find images at index {}", current_image_index);
+        //         // return;
+        //     }
+        // };
+        // let image_right = match image::open(right_path) {
+        //     Ok(img) => img.grayscale(),
+        //     Err(_) => {
+        //         warn!("cannot find images at index {}", current_image_index);
+        //         // return;
+        //     }
+        // };
     
-        // 调整图像大小
-        let image_left_resized = image_left.resize_exact(
-            (image_left.width() as f64 * 0.5) as u32,
-            (image_left.height() as f64 * 0.5) as u32,
-            FilterType::Nearest
-        );
-        let image_right_resized = image_right.resize_exact(
-            (image_right.width() as f64 * 0.5) as u32,
-            (image_right.height() as f64 * 0.5) as u32,
-            FilterType::Nearest
-        );
+        // // 调整图像大小
+        // let image_left_resized = image_left.resize_exact(
+        //     (image_left.width() as f64 * 0.5) as u32,
+        //     (image_left.height() as f64 * 0.5) as u32,
+        //     FilterType::Nearest
+        // );
+        // let image_right_resized = image_right.resize_exact(
+        //     (image_right.width() as f64 * 0.5) as u32,
+        //     (image_right.height() as f64 * 0.5) as u32,
+        //     FilterType::Nearest
+        // );
     
-        // 将 image 库的图像数据转换为 OMatrix 格式
-        let mut image_left_omatrix = OMatrix::from_element(
-            image_left_resized.height() as usize,
-            image_left_resized.width() as usize,
-            0u8
-        );
-        let mut image_right_omatrix = OMatrix::from_element(
-            image_right_resized.height() as usize,
-            image_right_resized.width() as usize,
-            0u8
-        );
+        // // 将 image 库的图像数据转换为 OMatrix 格式
+        // let mut image_left_omatrix = OMatrix::from_element(
+        //     image_left_resized.height() as usize,
+        //     image_left_resized.width() as usize,
+        //     0u8
+        // );
+        // let mut image_right_omatrix = OMatrix::from_element(
+        //     image_right_resized.height() as usize,
+        //     image_right_resized.width() as usize,
+        //     0u8
+        // );
     
-        for y in 0..image_left_resized.height() {
-            for x in 0..image_left_resized.width() {
-                let pixel = image_left_resized.get_pixel(x, y)[0];
-                image_left_omatrix[(y as usize, x as usize)] = pixel;
-            }
-        }
+        // for y in 0..image_left_resized.height() {
+        //     for x in 0..image_left_resized.width() {
+        //         let pixel = image_left_resized.get_pixel(x, y)[0];
+        //         image_left_omatrix[(y as usize, x as usize)] = pixel;
+        //     }
+        // }
     
-        for y in 0..image_right_resized.height() {
-            for x in 0..image_right_resized.width() {
-                let pixel = image_right_resized.get_pixel(x, y)[0];
-                image_right_omatrix[(y as usize, x as usize)] = pixel;
-            }
-        }
+        // for y in 0..image_right_resized.height() {
+        //     for x in 0..image_right_resized.width() {
+        //         let pixel = image_right_resized.get_pixel(x, y)[0];
+        //         image_right_omatrix[(y as usize, x as usize)] = pixel;
+        //     }
+        // }
     
-        // 这里可以使用 image_left_omatrix 和 image_right_omatrix 进行后续操作
-        println!("Image processing completed.");
+        // // 这里可以使用 image_left_omatrix 和 image_right_omatrix 进行后续操作
+        // println!("Image processing completed.");
         
-        /* end 使用image库转换 */
+        // /* end 使用image库转换 */
         
-        // 创建新的帧
-        let new_frame = Frame::CreateFrame();
-        new_frame.left_img_ = image_left_resized;
-        new_frame.right_img_ = image_right_resized;
-        self.current_image_index += 1;
+        // // 创建新的帧
+        // let new_frame = Frame::CreateFrame();
+        // new_frame.left_img_ = image_left_resized;
+        // new_frame.right_img_ = image_right_resized;
+        // self.current_image_index += 1;
 
-        Some(new_frame)
+        // Some(new_frame)
     }
 
     /// 根据相机 ID 获取相机
