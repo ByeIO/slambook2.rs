@@ -38,7 +38,23 @@ $v="v4.3.6"; iwr https://win.wasmer.io -useb | iex
 
 2. 使用wasmer运行时运行wasm二进制(仅测试了4.3.6版本)
 ```sh
-wasmer run 
+# --mapdir 本机目录:虚拟目录
+wasmer run --dir `pwd` "./prebuilt/ch13-myslam.wasm" -- --config-file "`pwd`/examples/ch13-myslam/assets/default.yaml"
+wasmer run ./prebuilt/ch13-myslam.wasm -- --help
+```
+输出:
+```sh
+输入的配置文件路径为: /Users/workspace/Desktop/projects/ByeIO/software/exp65-rust-ziglang-slambook2/examples/ch13-myslam/assets/default.yaml
+
+功能还没有实现完全, 勉强中...(ง •̀_•́)ง...,
+程序即将退出!
+
+Usage: ch13-myslam.wasm [OPTIONS]
+
+Options:
+  -c, --config-file <CONFIG_FILE>  配置文件路径 [default: ./assets/default.yaml]
+  -h, --help                       Print help
+  -V, --version                    Print version
 ```
 
 ### 开发笔记(博客)
@@ -130,6 +146,7 @@ directory = "vendor"
 >输出结果在logs文件夹和result文件夹
 
 1. **examples/ch8-direct_method_multi_layer.rs**
+
 |结果图|
 |-------------------------------------------------|
 |![结果图](./result/ch8-LK2_result_multi_level.png)|

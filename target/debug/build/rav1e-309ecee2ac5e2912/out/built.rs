@@ -48,10 +48,10 @@ pub const HOST: &str = r"aarch64-apple-darwin";
 pub const PROFILE: &str = r"debug";
 #[doc=r#"The compiler that cargo resolved to use."#]
 #[allow(dead_code)]
-pub const RUSTC: &str = r"/Users/workspace/.rustup/toolchains/nightly-aarch64-apple-darwin/bin/rustc";
+pub const RUSTC: &str = r"rustc";
 #[doc=r#"The documentation generator that cargo resolved to use."#]
 #[allow(dead_code)]
-pub const RUSTDOC: &str = r"/Users/workspace/.rustup/toolchains/nightly-aarch64-apple-darwin/bin/rustdoc";
+pub const RUSTDOC: &str = r"rustdoc";
 #[doc=r#"Value of OPT_LEVEL for the profile used during compilation."#]
 #[allow(dead_code)]
 pub const OPT_LEVEL: &str = r"0";
@@ -73,10 +73,10 @@ pub const FEATURES_LOWERCASE: [&str; 1] = ["threading"];
 #[doc=r#"The feature-string as above, from lowercase strings."#]
 #[allow(dead_code)]
 pub const FEATURES_LOWERCASE_STR: &str = r"threading";
-#[doc=r#"The output of `/Users/workspace/.rustup/toolchains/nightly-aarch64-apple-darwin/bin/rustc -V`"#]
+#[doc=r#"The output of `rustc -V`"#]
 #[allow(dead_code)]
 pub const RUSTC_VERSION: &str = r"rustc 1.83.0-nightly (14f303bc1 2024-10-04)";
-#[doc=r#"The output of `/Users/workspace/.rustup/toolchains/nightly-aarch64-apple-darwin/bin/rustdoc -V`; empty string if `/Users/workspace/.rustup/toolchains/nightly-aarch64-apple-darwin/bin/rustdoc -V` failed to execute"#]
+#[doc=r#"The output of `rustdoc -V`; empty string if `rustdoc -V` failed to execute"#]
 #[allow(dead_code)]
 pub const RUSTDOC_VERSION: &str = r"rustdoc 1.83.0-nightly (14f303bc1 2024-10-04)";
 #[doc=r#"The target architecture, given by `CARGO_CFG_TARGET_ARCH`."#]

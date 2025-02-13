@@ -17,9 +17,6 @@ use std::cell::{
 use std::sync::{Weak, Arc, RwLock, Mutex};
 use std::borrow::{Borrow, BorrowMut};
 
-// ORB特征提取
-use bye_orb_rs::{orb, fast, common::Matchable};
-
 // akaze特征提取
 use cv::feature::akaze::{Akaze, KeyPoint};
 
