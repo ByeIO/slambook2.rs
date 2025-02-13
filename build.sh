@@ -13,6 +13,4 @@ cargo build --example ch13-myslam --target wasm32-wasip1-threads --release
 # cargo build --example ch13-myslam --target wasm32-unknown-unknown
 cargo build --example ch3-useEigen-eigenMatrix -Z unstable-options --build-plan > 构建过程.md
 cargo build --example ch3-useEigen-eigenMatrix -Z unstable-options --unit-graph >> 构建过程.md
-cargo build --example ch3-useEigen-eigenMatrix --target wasm32-wasip1 --release --artifact-dir ./prebuilt --keep-going
-
-cargo build --example ch3-useEigen-eigenMatrix --keep-going
+cargo build --example ch3-useEigen-eigenMatrix --target wasm32-wasip1 --release -Z unstable-options --artifact-dir ./prebuilt --keep-going
