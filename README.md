@@ -2,7 +2,8 @@
 很多bug🕶️, 有些实现可能比较简略😂.
 已经将算法全用rust重写了.
 
-## 代码目录
+## 使用说明
+### 代码目录
 - examples文件夹
 - src文件夹
 ```sh
@@ -48,6 +49,21 @@ cargo run --example ch12-dense_mono-dense_mapping_image
 cargo run --example ch13-myslam
 ```
 
+### 预构建文件
+>有1000多个crate需要编译, 有可能会由于各种原因编译失败,因而提供预构建的wasm版本,理论上支持全平台.
+>使用`cargo build --target wasm32-wasip1-threads --release`编译
+1. 安装wasmer运行时
+(理论上也支持其他运行时,例如wasmedge, wazero, wamr), 没有测试. 
+参考教程[https://github.com/container2wasm/container2wasm]
+```sh
+curl https://get.wasmer.io -sSfL | sh
+```
+
+2. 使用wasmer运行时运行wasm二进制(仅测试了4.3.6版本)
+```sh
+
+```
+
 ## 编译
 ### 编译器版本
 测试编译通过的编译器:
@@ -76,3 +92,142 @@ replace-with = "vendored-sources"
 directory = "vendor"
 ```
 3. 如果遇到编译时有关库文件的报错直接修改vendor文件夹内的库文件即可.
+
+### 效果
+>输出结果在logs文件夹和result文件夹
+
+1. **examples/ch8-direct_method_multi_layer.rs**
+|结果图|
+|-------------------------------------------------|
+|![结果图](./result/ch8-LK2_result_multi_level.png)|
+
+2. **examples/ch11-loop_closure.rs**
+```log
+提取训练图片的特征...
+Extracting keypoint descriptors from "assets/ch11-data/8.png"
+Extracting keypoint descriptors from "assets/ch11-data/9.png"
+Extracting keypoint descriptors from "assets/ch11-data/10.png"
+Extracting keypoint descriptors from "assets/ch11-data/4.png"
+Extracting keypoint descriptors from "assets/ch11-data/5.png"
+Extracting keypoint descriptors from "assets/ch11-data/7.png"
+Extracting keypoint descriptors from "assets/ch11-data/6.png"
+Extracting keypoint descriptors from "assets/ch11-data/2.png"
+Extracting keypoint descriptors from "assets/ch11-data/3.png"
+Extracting keypoint descriptors from "assets/ch11-data/1.png"
+检测到 1000 个 ORB 特征。
+创建词汇表...
+
+词汇表 = Vocabulary {
+    Word/Leaf Nodes: 506,
+    Other Nodes: 82,
+    Levels: 3,
+    Branching Factor: 9,
+    Total Training Features: 1000,
+    Min Word Cluster Size: 1,
+    Max Word Cluster Size: 25,
+    Mean Word Cluster Size: 1,
+    Median Word Cluster Size: 1,
+}
+保存词汇表...
+加载词汇表...
+词汇表: Vocabulary {
+    Word/Leaf Nodes: 506,
+    Other Nodes: 82,
+    Levels: 3,
+    Branching Factor: 9,
+    Total Training Features: 1000,
+    Min Word Cluster Size: 1,
+    Max Word Cluster Size: 25,
+    Mean Word Cluster Size: 1,
+    Median Word Cluster Size: 1,
+}
+读取图片...
+检测 ORB 特征...
+比较图片与图片...
+当前 block id: 7, 最大 block 数: 83
+当前 block id: 60, 最大 block 数: 83
+当前 block id: 1, 最大 block 数: 83
+当前 block id: 10, 最大 block 数: 83
+当前 block id: 5, 最大 block 数: 83
+当前 block id: 50, 最大 block 数: 83
+当前 block id: 7, 最大 block 数: 83
+当前 block id: 61, 最大 block 数: 83
+当前 block id: 5, 最大 block 数: 83
+当前 block id: 51, 最大 block 数: 83
+当前 block id: 3, 最大 block 数: 83
+当前 block id: 31, 最大 block 数: 83
+当前 block id: 2, 最大 block 数: 83
+当前 block id: 19, 最大 block 数: 83
+当前 block id: 9, 最大 block 数: 83
+当前 block id: 77, 最大 block 数: 83
+当前 block id: 1, 最大 block 数: 83
+当前 block id: 15, 最大 block 数: 83
+当前 block id: 1, 最大 block 数: 83
+当前 block id: 16, 最大 block 数: 83
+当前 block id: 3, 最大 block 数: 83
+当前 block id: 31, 最大 block 数: 83
+当前 block id: 2, 最大 block 数: 83
+当前 block id: 19, 最大 block 数: 83
+当前 block id: 4, 最大 block 数: 83
+当前 block id: 39, 最大 block 数: 83
+当前 block id: 5, 最大 block 数: 83
+当前 block id: 47, 最大 block 数: 83
+当前 block id: 4, 最大 block 数: 83
+当前 block id: 38, 最大 block 数: 83
+当前 block id: 3, 最大 block 数: 83
+当前 block id: 31, 最大 block 数: 83
+当前 block id: 3, 最大 block 数: 83
+当前 block id: 31, 最大 block 数: 83
+当前 block id: 2, 最大 block 数: 83
+当前 block id: 19, 最大 block 数: 83
+当前 block id: 1, 最大 block 数: 83
+当前 block id: 12, 最大 block 数: 83
+当前 block id: 6, 最大 block 数: 83
+当前 block id: 52, 最大 block 数: 83
+当前 block id: 5, 最大 block 数: 83
+当前 block id: 49, 最大 block 数: 83
+当前 block id: 1, 最大 block 数: 83
+当前 block id: 10, 最大 block 数: 83
+当前 block id: 2, 最大 block 数: 83
+当前 block id: 25, 最大 block 数: 83
+当前 block id: 2, 最大 block 数: 83
+当前 block id: 21, 最大 block 数: 83
+当前 block id: 2, 最大 block 数: 83
+当前 block id: 21, 最大 block 数: 83
+当前 block id: 7, 最大 block 数: 83
+当前 block id: 61, 最大 block 数: 83
+当前 block id: 5, 最大 block 数: 83
+当前 block id: 47, 最大 block 数: 83
+当前 block id: 2, 最大 block 数: 83
+当前 block id: 22, 最大 block 数: 83
+当前 block id: 3, 最大 block 数: 83
+当前 block id: 31, 最大 block 数: 83
+当前 block id: 1, 最大 block 数: 83
+当前 block id: 10, 最大 block 数: 83
+当前 block id: 2, 最大 block 数: 83
+当前 block id: 19, 最大 block 数: 83
+当前 block id: 1, 最大 block 数: 83
+当前 block id: 16, 最大 block 数: 83
+当前 block id: 2, 最大 block 数: 83
+当前 block id: 27, 最大 block 数: 83
+当前 block id: 5, 最大 block 数: 83
+当前 block id: 47, 最大 block 数: 83
+当前 block id: 7, 最大 block 数: 83
+当前 block id: 60, 最大 block 数: 83
+当前 block id: 8, 最大 block 数: 83
+当前 block id: 67, 最大 block 数: 83
+当前 block id: 8, 最大 block 数: 83
+当前 block id: 71, 最大 block 数: 83
+当前 block id: 1, 最大 block 数: 83
+当前 block id: 11, 最大 block 数: 83
+当前 block id: 1, 最大 block 数: 83
+当前 block id: 13, 最大 block 数: 83
+当前 block id: 4, 最大 block 数: 83
+当前 block id: 39, 最大 block 数: 83
+当前 block id: 6, 最大 block 数: 83
+当前 block id: 52, 最大 block 数: 83
+当前 block id: 8, 最大 block 数: 83
+当前 block id: 69, 最大 block 数: 83
+当前 block id: 8, 最大 block 数: 83
+当前 block id: 68, 最大 block 数: 83
+```
