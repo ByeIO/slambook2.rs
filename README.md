@@ -1,11 +1,52 @@
 # slambook2的rust重构
-很多bug🕶️, 有些实现可能比较简略😂.
-已经将算法全用rust重写了.
+本项目是对[https://github.com/gaoxiang12/slambook2]的rust重构.
+很多bug😂和todo🧾, 有些实现可能比较简略😄.
+已经将很多算法用rust重写了.
 
 ## 使用说明
-### 代码目录
+### 工程目录
+- Cargo.toml : 编译配置文件
 - examples文件夹
 - src文件夹
+- deprecated文件夹 : 弃用的zig语言方案
+
+Cargo.lock	README.md	deprecated	logs		reference	static		vendor
+Cargo.toml	assets		examples	prebuilt	result		target		问题
+LICENSE		build.sh	justfile	python		src		tools		文档链接.md
+
+### 预构建文件
+>有1000多个crate需要编译, 有可能会由于各种原因编译失败,因而提供预构建的wasm版本,理论上支持全平台.
+>使用`cargo build --target wasm32-wasip1-threads --release`编译
+1. 安装wasmer运行时
+(理论上也支持其他运行时,例如wasmedge, wazero, wamr), 没有测试. 
+参考教程[https://github.com/container2wasm/container2wasm]
+```shell
+# macOS/Linux
+curl https://get.wasmer.io -sSfL | sh
+curl https://get.wasmer.io -sSfL | sh -s "v4.3.6"
+# Windows
+iwr https://win.wasmer.io -useb | iex
+$v="v4.3.6"; iwr https://win.wasmer.io -useb | iex
+```
+
+2. 使用wasmer运行时运行wasm二进制(仅测试了4.3.6版本)
+```sh
+
+```
+
+## 编译
+### 编译器版本
+测试编译通过的编译器:
+```sh
+rustc --version; rustup --version; cargo --version
+>rustc 1.83.0-nightly (14f303bc1 2024-10-04)
+>rustup 1.27.1 (54dd3d00f 2024-04-24)
+>info: This is the version for the rustup toolchain manager, not the rustc compiler.
+>info: The currently active `rustc` version is `rustc 1.83.0-nightly (14f303bc1 2024-10-04)`
+>cargo 1.83.0-nightly (80d82ca22 2024-09-27)
+```
+
+### 运行示例
 ```sh
 cargo run --example ch3-coordinateTransform
 cargo run --example ch3-useEigen-eigenMatrix
@@ -47,33 +88,6 @@ cargo run --example ch12-dense_RGBD-surfel_mapping
 cargo run --example ch12-dense_mono-dense_mapping
 cargo run --example ch12-dense_mono-dense_mapping_image
 cargo run --example ch13-myslam
-```
-
-### 预构建文件
->有1000多个crate需要编译, 有可能会由于各种原因编译失败,因而提供预构建的wasm版本,理论上支持全平台.
->使用`cargo build --target wasm32-wasip1-threads --release`编译
-1. 安装wasmer运行时
-(理论上也支持其他运行时,例如wasmedge, wazero, wamr), 没有测试. 
-参考教程[https://github.com/container2wasm/container2wasm]
-```sh
-curl https://get.wasmer.io -sSfL | sh
-```
-
-2. 使用wasmer运行时运行wasm二进制(仅测试了4.3.6版本)
-```sh
-
-```
-
-## 编译
-### 编译器版本
-测试编译通过的编译器:
-```sh
-rustc --version; rustup --version; cargo --version
->rustc 1.83.0-nightly (14f303bc1 2024-10-04)
->rustup 1.27.1 (54dd3d00f 2024-04-24)
->info: This is the version for the rustup toolchain manager, not the rustc compiler.
->info: The currently active `rustc` version is `rustc 1.83.0-nightly (14f303bc1 2024-10-04)`
->cargo 1.83.0-nightly (80d82ca22 2024-09-27)
 ```
 
 ### 使用本地crate
