@@ -18,6 +18,7 @@ use std::cell::{
 use nalgebra::{Vector3 as Vec3, Vector2 as Vec2, Matrix3 as Mat33}; // 引入 nalgebra 中的类型
 
 // 定义相机结构体
+#[derive(Debug)]
 pub struct Camera {
     // 相机内参
     pub fx: f64,
