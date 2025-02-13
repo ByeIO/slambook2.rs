@@ -2549,6 +2549,46 @@ dependencies = [
 ]
 
 [[package]]
+name = "clap"
+version = "4.5.29"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8acebd8ad879283633b343856142139f2da2317c96b05b4dd6181c61e2480184"
+dependencies = [
+ "clap_builder",
+ "clap_derive",
+]
+
+[[package]]
+name = "clap_builder"
+version = "4.5.29"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f6ba32cbda51c7e1dfd49acc1457ba1a7dec5b64fe360e828acb13ca8dc9c2f9"
+dependencies = [
+ "anstream",
+ "anstyle",
+ "clap_lex",
+ "strsim 0.11.1",
+]
+
+[[package]]
+name = "clap_derive"
+version = "4.5.28"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bf4ced95c6f4a675af3da73304b9ac4ed991640c36374e4b46795c49e17cf1ed"
+dependencies = [
+ "heck",
+ "proc-macro2 1.0.93",
+ "quote 1.0.38",
+ "syn 2.0.98",
+]
+
+[[package]]
+name = "clap_lex"
+version = "0.7.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f46ad14479a25103f283c0f10005961cf086d8dc42205bb44c46ac563475dca6"
+
+[[package]]
 name = "clipboard-win"
 version = "5.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3211,7 +3251,7 @@ dependencies = [
  "ident_case",
  "proc-macro2 1.0.93",
  "quote 1.0.38",
- "strsim",
+ "strsim 0.9.3",
  "syn 1.0.109",
 ]
 
@@ -4054,6 +4094,7 @@ dependencies = [
  "bye_orb_rs 0.1.1",
  "bye_pcl_rs",
  "bytemuck",
+ "clap",
  "cv",
  "cv-core",
  "cv-geom",
@@ -10607,6 +10648,12 @@ name = "strsim"
 version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6446ced80d6c486436db5c078dde11a9f73d42b57fb273121e160b84f63d894c"
+
+[[package]]
+name = "strsim"
+version = "0.11.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7da8b5736845d9f2fcb837ea5d9e2628564b3b043a70948a3f0b778838c5fb4f"
 
 [[package]]
 name = "svg_fmt"

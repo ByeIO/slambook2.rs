@@ -8,9 +8,9 @@ use std::fs::File;
 use std::io::Read;
 
 // 配置类，单例模式
-struct Config {
+pub struct Config {
     // 存储解析后的 YAML 数据
-    yaml: Yaml,
+    pub yaml: Yaml,
 }
 
 // 为 Config 实现 PartialEq trait，以允许在模式匹配中使用
@@ -88,16 +88,16 @@ impl Config {
 }
 
 // 配置数据
-struct ConfigData {
-    filename: String,
-    dataset_dir: Option<String>,
-    fx: Option<f64>,
-    fy: Option<f64>,
-    cx: Option<f64>,
-    cy: Option<f64>,
-    num_features: Option<i64>,
-    num_features_init: Option<i64>,
-    num_features_tracking: Option<i64>,
+pub struct ConfigData {
+    pub filename: String,
+    pub dataset_dir: Option<String>,
+    pub fx: Option<f64>,
+    pub fy: Option<f64>,
+    pub cx: Option<f64>,
+    pub cy: Option<f64>,
+    pub num_features: Option<i64>,
+    pub num_features_init: Option<i64>,
+    pub num_features_tracking: Option<i64>,
 }
 
 // 静态配置数据实例

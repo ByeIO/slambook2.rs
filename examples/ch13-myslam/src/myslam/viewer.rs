@@ -42,6 +42,7 @@ use image::{
 };
 
 // 定义 Viewer 结构体
+#[derive(Debug)]
 pub struct Viewer {
     current_frame_: Option<Arc<Frame>>,
     map_: Option<Arc<Map>>,
@@ -53,51 +54,55 @@ pub struct Viewer {
     viewer_data_mutex_: Mutex<()>,
 }
 
-// impl Viewer {
-//     // 构造函数
-//     pub fn new() -> Self {
-//         let viewer = Viewer {
-//             current_frame_: None,
-//             map_: None,
-//             viewer_thread_: None,
-//             viewer_running_: true,
-//             active_keyframes_: std::collections::HashMap::new(),
-//             active_landmarks_: std::collections::HashMap::new(),
-//             map_updated_: false,
-//             viewer_data_mutex_: Mutex::new(()),
-//         };
-//         viewer.viewer_thread_ = Some(thread::spawn(move || viewer.thread_loop()));
-//         viewer
-//     }
+impl Viewer {
+    // 构造函数
+    pub fn new() -> Self {
+        let viewer = Viewer {
+            current_frame_: None,
+            map_: None,
+            viewer_thread_: None,
+            viewer_running_: true,
+            active_keyframes_: std::collections::HashMap::new(),
+            active_landmarks_: std::collections::HashMap::new(),
+            map_updated_: false,
+            viewer_data_mutex_: Mutex::new(()),
+        };
+        
+        // TODO 修复thread_loop()
+        // viewer.viewer_thread_ = Some(thread::spawn(move || viewer.thread_loop()));
+        
+        // 返回
+        viewer
+    }
 
-//     // 设置地图
-//     pub fn set_map(&mut self, map: Arc<Map>) {
-//         self.map_ = Some(map);
-//     }
+    // 设置地图
+    pub fn set_map(&mut self, map: Arc<Map>) {
+        self.map_ = Some(map);
+    }
 
-//     // 关闭Viewer
-//     pub fn close(&mut self) {
-//         self.viewer_running_ = false;
-//         if let Some(thread) = self.viewer_thread_.take() {
-//             thread.join().unwrap();
-//         }
-//     }
+    // 关闭Viewer
+    pub fn close(&mut self) {
+        self.viewer_running_ = false;
+        if let Some(thread) = self.viewer_thread_.take() {
+            thread.join().unwrap();
+        }
+    }
 
-//     // 增加当前帧
-//     pub fn add_current_frame(&mut self, current_frame: Arc<Frame>) {
-//         let mut lck = self.viewer_data_mutex_.lock().unwrap();
-//         self.current_frame_ = Some(current_frame);
-//     }
+    // 增加当前帧
+    pub fn add_current_frame(&mut self, current_frame: Arc<Frame>) {
+        let mut lck = self.viewer_data_mutex_.lock().unwrap();
+        self.current_frame_ = Some(current_frame);
+    }
 
-//     // 更新地图
-//     pub fn update_map(&mut self) {
-//         let mut lck = self.viewer_data_mutex_.lock().unwrap();
-//         if let Some(map) = self.map_.as_ref() {
-//             self.active_keyframes_ = map.get_active_key_frames();
-//             self.active_landmarks_ = map.get_active_map_points();
-//             self.map_updated_ = true;
-//         }
-//     }
+    // 更新地图
+    pub fn update_map(&mut self) {
+        let mut lck = self.viewer_data_mutex_.lock().unwrap();
+        if let Some(map) = self.map_.as_ref() {
+            self.active_keyframes_ = map.get_active_key_frames();
+            self.active_landmarks_ = map.get_active_map_points();
+            self.map_updated_ = true;
+        }
+    }
 
 //     // 线程循环
 //     fn thread_loop(&mut self) {
@@ -270,4 +275,5 @@ pub struct Viewer {
 
 //         img_out
 //     }
-// }
+
+} // end impl

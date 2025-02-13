@@ -90,6 +90,9 @@ bye_pcl_rs = { version = "0.1.3", path="../../static/bye_pcl_rs" }
 # YAML解析
 yaml-rust2 = { version = "0.10.0" }
 
+# cli命令行参数解析
+clap = { version = "4.5.29", features = ["derive"] }
+
 # 伴生库
 # myslam = { version = "0.1.0", path = "./src" }
 

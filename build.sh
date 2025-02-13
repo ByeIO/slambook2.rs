@@ -9,3 +9,5 @@ RUST_BACKTRACE=1 cargo run --example ch10-pose_graph_g2o_lie_algebra > logs/ch10
 cargo run --example ch12-dense_mono-dense_mapping_image > /dev/null
 cargo build --example ch12-dense_mono-dense_mapping_image
 cargo run --example ch12-dense_RGBD-surfel_mapping > logs/ch12-dense_RGBD-surfel_mapping.log
+cargo build --example ch13-myslam --target wasm32-wasip1-threads --release
+# cargo build --example ch13-myslam --target wasm32-unknown-unknown

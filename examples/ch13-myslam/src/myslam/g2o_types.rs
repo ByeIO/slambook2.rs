@@ -14,6 +14,10 @@ use std::path::Path;
 use std::cell::{
     RefMut, Ref, RefCell
 };
+use std::sync::{Weak, Arc, Mutex, RwLock};
+use std::collections::HashMap;
+use std::ops::{Deref, DerefMut};
+use std::borrow::{Borrow, BorrowMut};
 
 // 定义符号变量
 assign_symbols!(X: SE3);
@@ -21,88 +25,90 @@ assign_symbols!(Y: VectorVar3);
 assign_symbols!(Z: VectorVar2);
 
 // 位姿顶点
-struct VertexPose {
-    id: usize,
-    // 使用 RefCell 包装 SE3
-    estimate: RefCell<SE3>, 
+pub struct VertexPose {
+    pub id: usize,
+    // 使用 RwLock 包装 SE3
+    pub estimate: RwLock<SE3>, 
 }
 
 impl VertexPose {
-    fn new(id: usize, estimate: SE3) -> Self {
+    pub fn new(id: usize, estimate: SE3) -> Self {
         Self {
             id,
-            estimate: RefCell::new(estimate),
+            estimate: RwLock::new(estimate),
         }
     }
 
     // 将顶点估计值设置为初始值
-    fn set_to_origin(&mut self) {
-        *self.estimate.borrow_mut() = SE3::identity();
+    pub fn set_to_origin(&mut self) {
+        let mut estimate = self.estimate.write().unwrap();
+        *estimate = SE3::identity();
     }
 
     // 对SE3进行左乘更新
-    fn oplus(&mut self, update: &Vector6<f64>) {
-        let mut estimate = self.estimate.borrow_mut();
+    pub fn oplus(&mut self, update: &Vector6<f64>) {
+        let mut estimate = self.estimate.write().unwrap();
         *estimate = SE3::exp(update.into()) * estimate.clone();
     }
 
     // 读取顶点数据（这里暂时简单返回成功）
-    fn read(&mut self, _is: &mut dyn BufRead) -> io::Result<()> {
+    pub fn read(&mut self, _is: &mut dyn BufRead) -> io::Result<()> {
         Ok(())
     }
 
     // 写入顶点数据（这里暂时简单返回成功）
-    fn write(&self, _os: &mut dyn Write) -> io::Result<()> {
+    pub fn write(&self, _os: &mut dyn Write) -> io::Result<()> {
         Ok(())
     }
 }
 
 // 路标顶点
-struct VertexXYZ {
-    id: usize,
-    estimate: RefCell<Vec3>,  // 使用 RefCell 包装 Vec3
+pub struct VertexXYZ {
+    pub id: usize,
+    pub estimate: RwLock<Vec3>,  // 使用 RwLock 包装 Vec3
 }
 
 impl VertexXYZ {
-    fn new(id: usize, estimate: Vec3) -> Self {
+    pub fn new(id: usize, estimate: Vec3) -> Self {
         Self {
             id,
-            estimate: RefCell::new(estimate),
+            estimate: RwLock::new(estimate),
         }
     }
 
     // 将顶点估计值设置为零向量
-    fn set_to_origin(&mut self) {
-        *self.estimate.borrow_mut() = Vec3::zeros();
+    pub fn set_to_origin(&mut self) {
+        let mut estimate = self.estimate.write().unwrap();
+        *estimate = Vec3::zeros();
     }
 
     // 更新顶点估计值
-    fn oplus(&mut self, update: &Vec3) {
-        let mut estimate = self.estimate.borrow_mut();
+    pub fn oplus(&mut self, update: &Vec3) {
+        let mut estimate = self.estimate.write().unwrap();
         *estimate += update;
     }
 
     // 读取顶点数据（这里暂时简单返回成功）
-    fn read(&mut self, _is: &mut dyn BufRead) -> io::Result<()> {
+    pub fn read(&mut self, _is: &mut dyn BufRead) -> io::Result<()> {
         Ok(())
     }
 
     // 写入顶点数据（这里暂时简单返回成功）
-    fn write(&self, _os: &mut dyn Write) -> io::Result<()> {
+    pub fn write(&self, _os: &mut dyn Write) -> io::Result<()> {
         Ok(())
     }
 }
 
 // 仅估计位姿的一元边
-struct EdgeProjectionPoseOnly {
-    vertex: usize,
-    measurement: Vec2,
-    pos3d: Vec3,
-    K: Mat33,
+pub struct EdgeProjectionPoseOnly {
+    pub vertex: usize,
+    pub measurement: Vec2,
+    pub pos3d: Vec3,
+    pub K: Mat33,
 }
 
 impl EdgeProjectionPoseOnly {
-    fn new(vertex: usize, measurement: Vec2, pos3d: Vec3, K: Mat33) -> Self {
+    pub fn new(vertex: usize, measurement: Vec2, pos3d: Vec3, K: Mat33) -> Self {
         Self {
             vertex,
             measurement,
@@ -112,7 +118,7 @@ impl EdgeProjectionPoseOnly {
     }
 
     // 计算误差
-    fn compute_error(&self, v: &SE3) -> Vec2 {
+    pub fn compute_error(&self, v: &SE3) -> Vec2 {
         // 使用 `apply` 方法将 SE3 作用于向量
         let pos_cam = v.apply(self.pos3d.as_view());
         let pos_pixel = self.K * pos_cam;
@@ -121,7 +127,7 @@ impl EdgeProjectionPoseOnly {
     }
 
     // 计算雅可比矩阵
-    fn linearize_oplus(&self, v: &SE3) -> Matrix2x6<f64> {
+    pub fn linearize_oplus(&self, v: &SE3) -> Matrix2x6<f64> {
         let pos_cam = v.apply(self.pos3d.as_view());
         let fx = self.K[(0, 0)];
         let fy = self.K[(1, 1)];
@@ -144,28 +150,28 @@ impl EdgeProjectionPoseOnly {
     }
 
     // 读取边数据（这里暂时简单返回成功）
-    fn read(&mut self, _is: &mut dyn BufRead) -> io::Result<()> {
+    pub fn read(&mut self, _is: &mut dyn BufRead) -> io::Result<()> {
         Ok(())
     }
 
     // 写入边数据（这里暂时简单返回成功）
-    fn write(&self, _os: &mut dyn Write) -> io::Result<()> {
+    pub fn write(&self, _os: &mut dyn Write) -> io::Result<()> {
         Ok(())
     }
 }
 
 // 带有地图和位姿的二元边
-struct EdgeProjection {
-    vertex_pose: usize,
-    vertex_xyz: usize,
-    measurement: Vec2,
-    K: Mat33,
-    cam_ext: SE3,
+pub struct EdgeProjection {
+    pub vertex_pose: usize,
+    pub vertex_xyz: usize,
+    pub measurement: Vec2,
+    pub K: Mat33,
+    pub cam_ext: SE3,
 }
 
 impl EdgeProjection {
     // 构造时传入相机内外参
-    fn new(vertex_pose: usize, vertex_xyz: usize, measurement: Vec2, K: Mat33, cam_ext: SE3) -> Self {
+    pub fn new(vertex_pose: usize, vertex_xyz: usize, measurement: Vec2, K: Mat33, cam_ext: SE3) -> Self {
         Self {
             vertex_pose,
             vertex_xyz,
@@ -176,7 +182,7 @@ impl EdgeProjection {
     }
 
     // 计算误差
-    fn compute_error(&self, v0: &SE3, v1: &Vec3) -> Vec2 {
+    pub fn compute_error(&self, v0: &SE3, v1: &Vec3) -> Vec2 {
         // 使用 `apply` 方法将 SE3 作用于向量
         let pos_cam = self.cam_ext.apply(v0.apply(v1.as_view()).as_view());
         let pos_pixel = self.K * pos_cam;
@@ -185,7 +191,7 @@ impl EdgeProjection {
     }
 
     // 计算雅可比矩阵
-    fn linearize_oplus(&self, v0: &SE3, v1: &Vec3) -> (Matrix2x6<f64>, Matrix2x3<f64>) {
+    pub fn linearize_oplus(&self, v0: &SE3, v1: &Vec3) -> (Matrix2x6<f64>, Matrix2x3<f64>) {
         let pos_cam = self.cam_ext.apply(v0.apply(v1.as_view()).as_view());
         let fx = self.K[(0, 0)];
         let fy = self.K[(1, 1)];
@@ -211,12 +217,12 @@ impl EdgeProjection {
     }
 
     // 读取边数据（这里暂时简单返回成功）
-    fn read(&mut self, _is: &mut dyn BufRead) -> io::Result<()> {
+    pub fn read(&mut self, _is: &mut dyn BufRead) -> io::Result<()> {
         Ok(())
     }
 
     // 写入边数据（这里暂时简单返回成功）
-    fn write(&self, _os: &mut dyn Write) -> io::Result<()> {
+    pub fn write(&self, _os: &mut dyn Write) -> io::Result<()> {
         Ok(())
     }
 }
@@ -232,11 +238,14 @@ mod tests1 {
 
     // 辅助函数：检查 SE3 实例是否相等
     fn se3_equals(se3_1: &SE3, se3_2: &SE3) -> bool {
-        se3_1.rot().to_matrix() == se3_2.rot().to_matrix() && se3_1.xyz().as_slice() == se3_2.xyz().as_slice()
+        se3_1.rot().to_matrix() == se3_2.rot().to_matrix()
+            && se3_1.xyz().as_slice() == se3_2.xyz().as_slice()
     }
 
     // 辅助函数：检查矩阵的所有元素是否为有限值
-    fn matrix_is_finite<T: Copy + num_traits::Float + Debug + 'static>(matrix: &OMatrix<T, Dyn, Dyn>) -> bool {
+    fn matrix_is_finite<T: Copy + num_traits::Float + Debug + 'static>(
+        matrix: &OMatrix<T, Dyn, Dyn>,
+    ) -> bool {
         matrix.iter().all(|&x| x.is_finite())
     }
 
@@ -254,7 +263,8 @@ mod tests1 {
         // 验证 id 是否正确
         assert_eq!(vertex.id, id);
         // 验证 estimate 是否正确
-        assert!(se3_equals(&*vertex.estimate.borrow(), &estimate));
+        let estimate_read = vertex.estimate.read().unwrap();
+        assert!(se3_equals(&estimate_read, &estimate));
     }
 
     // 测试 VertexPose 结构体的 set_to_origin 方法
@@ -266,7 +276,8 @@ mod tests1 {
         let mut vertex = VertexPose::new(id, estimate);
         vertex.set_to_origin();
         // 验证 estimate 是否被设置为单位矩阵
-        assert!(se3_equals(&*vertex.estimate.borrow(), &SE3::identity()));
+        let estimate_read = vertex.estimate.read().unwrap();
+        assert!(se3_equals(&estimate_read, &SE3::identity()));
     }
 
     // 测试 VertexPose 结构体的 oplus 方法
@@ -280,7 +291,8 @@ mod tests1 {
         vertex.oplus(&update);
         // 验证 estimate 是否正确更新
         let expected = SE3::exp(update_view) * estimate;
-        assert!(se3_equals(&*vertex.estimate.borrow(), &expected));
+        let estimate_read = vertex.estimate.read().unwrap();
+        assert!(se3_equals(&estimate_read, &expected));
     }
 
     // 测试 VertexPose 结构体的 read 方法
@@ -314,7 +326,8 @@ mod tests1 {
         // 验证 id 是否正确
         assert_eq!(vertex.id, id);
         // 验证 estimate 是否正确
-        assert_eq!(*vertex.estimate.borrow(), estimate);
+        let estimate_read = vertex.estimate.read().unwrap();
+        assert_eq!(*estimate_read, estimate);
     }
 
     // 测试 VertexXYZ 结构体的 set_to_origin 方法
@@ -325,7 +338,8 @@ mod tests1 {
         let mut vertex = VertexXYZ::new(id, estimate);
         vertex.set_to_origin();
         // 验证 estimate 是否被设置为零向量
-        assert_eq!(*vertex.estimate.borrow(), Vec3::zeros());
+        let estimate_read = vertex.estimate.read().unwrap();
+        assert_eq!(*estimate_read, Vec3::zeros());
     }
 
     // 测试 VertexXYZ 结构体的 oplus 方法
@@ -337,7 +351,8 @@ mod tests1 {
         let update = Vec3::new(1.0, 1.0, 1.0);
         vertex.oplus(&update);
         // 验证 estimate 是否正确更新
-        assert_eq!(*vertex.estimate.borrow(), estimate + update);
+        let estimate_read = vertex.estimate.read().unwrap();
+        assert_eq!(*estimate_read, estimate + update);
     }
 
     // 测试 VertexXYZ 结构体的 read 方法
